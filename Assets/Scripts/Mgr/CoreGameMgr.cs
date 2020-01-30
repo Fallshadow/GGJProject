@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CoreGameMgr : SingletonMonoBehaviorNoDestroy<CoreGameMgr>
 {
+    
     private void Start() {
         
     }

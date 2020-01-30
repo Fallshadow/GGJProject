@@ -28,6 +28,12 @@ public class LevelMgr : SingletonMonoBehaviorNoDestroy<LevelMgr>
     }
     public void LoadNectLevel()
     {
+        if(curLevel ==LEVEL_NAME.LN_LEVEL2)
+        {
+            SceneManager.LoadScene(0);
+            curLevel = LEVEL_NAME.LN_START;
+            return;
+        }
         LEVEL_NAME level = curLevel + 1;
         SceneManager.LoadScene((int)level);
         UIMgr.instance.DestoryAllUi();

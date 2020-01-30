@@ -5,6 +5,14 @@ using UnityEngine;
 [RequireComponent(typeof(MoveFunction))]
 public class Player : MonoBehaviour
 {
+    [Header("信号")]
+    public bool inputLeft = false;
+    public bool inputRight = false;
+    public bool inputUp = false;
+    public bool inputDown = false;
+    public bool inputJump = false;
+    public bool inputDash = false;
+    public bool inputGrab = false;
     public float x = 0;
     public float y = 0;
     public float xRaw = 0;
@@ -52,8 +60,44 @@ public class Player : MonoBehaviour
         }
         else
         {
+            if(x > 0)
+            {
 
+            }
+            if(y > 0)
+            {
+                
+            }
+            if(x < 0)
+            {
+                
+            }
+            if(y < 0)
+            {
+                
+            }
+            if (inputLeft)
+            {
+                
+            }
+            if (inputJump)
+            {
+                moveFunction.Jump(Vector2.up);
+            }
+            if (inputGrab)
+            {
+                moveFunction.GrabWall();
+            }
+            if (inputLeft)
+            {
+                moveFunction.Jump(Vector2.up);
+            }
         }
         moveFunction.SetCollision(x,y);
+    }
+
+    public void MergeInput(bool x,bool y)
+    {
+
     }
 }
