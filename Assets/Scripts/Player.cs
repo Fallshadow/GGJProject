@@ -13,10 +13,12 @@ public class Player : MonoBehaviour
     public bool inputJump = false;
     public bool inputDash = false;
     public bool inputGrab = false;
+    public bool[] playerbools = new bool[7];
     public float x = 0;
     public float y = 0;
     public float xRaw = 0;
     public float yRaw = 0;
+    public float changePoint = 0.9f;
     public bool isFreeControl = true;
     private MoveFunction moveFunction = null;
     void Awake()
@@ -60,26 +62,86 @@ public class Player : MonoBehaviour
         }
         else
         {
-            if(x > 0)
+            inputJump = false;
+            inputGrab = false;
+            inputDash = false;
+            if(x < -changePoint)
             {
+                inputLeft = true;
+                inputRight = false;
+            }
+            if(x == 0)
+            {
+                inputLeft = false;
+                inputRight = false;
+            }
+            if(x > changePoint)
+            {
+                inputLeft = false;
+                inputRight = true;
+            }
+            if(y > changePoint)
+            {
+                inputUp = true;
+                inputDown = false;
+            }
+            if(y == 0)
+            {
+                inputUp = false;
+                inputDown = false;
+            }
+            if(y < -changePoint)
+            {
+                inputUp = false;
+                inputDown = true;
+            }
+            if (Input.GetButton("Jump"))
+            {
+                inputJump = true;
+            }
+            if (Input.GetButton("Fire3"))
+            {
+                inputGrab = true;
+            }
+            if (Input.GetButton("Fire1"))
+            {
+                inputDash = true;
+            }
 
-            }
-            if(y > 0)
+            playerbools = new bool[7]
             {
-                
-            }
-            if(x < 0)
-            {
-                
-            }
-            if(y < 0)
-            {
-                
-            }
+                inputLeft ,
+                inputRight,
+                inputUp,
+                inputDown ,
+                inputJump ,
+                inputDash ,
+                inputGrab ,
+            };
+            CheckMergeInput();
+
             if (inputLeft)
             {
-                
+                x = -1;
+                xRaw = -1;
             }
+            if (inputRight)
+            {
+                x = 1;
+                xRaw = 1;
+            }
+            if (inputUp)
+            {
+                x = 1;
+                xRaw = 1;
+            }
+            if (inputDown)
+            {
+                x = -1;
+                xRaw = -1;
+            }
+            dir = new Vector2(x,y);
+            moveFunction.Walk(dir);
             if (inputJump)
             {
                 moveFunction.Jump(Vector2.up);
@@ -88,16 +150,41 @@ public class Player : MonoBehaviour
             {
                 moveFunction.GrabWall();
             }
-            if (inputLeft)
+            if (inputDash)
             {
-                moveFunction.Jump(Vector2.up);
+                if(xRaw != 0 || yRaw != 0)
+                    moveFunction.Dash(new Vector2(xRaw,yRaw));
             }
         }
         moveFunction.SetCollision(x,y);
     }
 
-    public void MergeInput(bool x,bool y)
+    public void CheckMergeInput()
     {
+        foreach (int[] commend in CommendMgr.instance.playerCommends)
+        {
+            foreach (int item in commend)
+            {
+                if (playerbools[item] == true)
+                {
+                    foreach (int citem in commend)
+                    {
+                        playerbools[citem] = true;
+                    }
+                }
+            }
+        }
+        SetBools();
+    }
 
+    public void SetBools()
+    {
+        inputLeft  = playerbools[0];
+        inputRight = playerbools[1];
+        inputUp    = playerbools[2];
+        inputDown  = playerbools[3];
+        inputJump  = playerbools[4];
+        inputDash  = playerbools[5];
+        inputGrab  = playerbools[6];  
     }
 }
