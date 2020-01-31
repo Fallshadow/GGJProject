@@ -112,9 +112,9 @@ public class MoveFunction : MonoBehaviour
     /// </summary>
     public void Dash(Vector2 dir)
     {
-        if(!canDashTRG || hasDashed)
+        if(!canDashTRG || hasDashed || isDashing)
         {
-            if(!canDashUni)
+            if(!canDashUni || isDashing)
             {
                 return;
             }
@@ -140,7 +140,7 @@ public class MoveFunction : MonoBehaviour
         rb.gravityScale = 0;
         isDashing = true;
         betterJump.enabled = false;
-        yield return new WaitForSeconds(.3f);
+        yield return new WaitForSeconds(.7f);
         rb.gravityScale = 3;
         isDashing = false;
         betterJump.enabled = true;

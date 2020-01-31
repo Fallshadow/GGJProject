@@ -46,11 +46,15 @@ public class LevelMgr : SingletonMonoBehaviorNoDestroy<LevelMgr>
         {
             UIMgr.instance.GetUI(PrefabPathConfig.MainGameTip);
         }
-        RestartCurLevel();
-        SceneManager.LoadScene((int)level);
+        StartCoroutine(_restart());
+
 
     }
-
+IEnumerator _restart()
+{yield return new WaitForSeconds(0.2f);
+        RestartCurLevel();
+        SceneManager.LoadScene((int)curLevel);
+}
     public void RestartCurLevel()
     {
         player.transform.position = curStruct.StartPos;
