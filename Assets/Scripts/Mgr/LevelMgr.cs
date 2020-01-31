@@ -18,6 +18,7 @@ public class LevelMgr : SingletonMonoBehaviorNoDestroy<LevelMgr>
 {
     public LEVEL_NAME curLevel = LEVEL_NAME.LN_START;
     public LevelStruct curStruct;
+    [HideInInspector]
     public GameObject player = null;
     private void Start() {
         player = GameObject.Find("Player");

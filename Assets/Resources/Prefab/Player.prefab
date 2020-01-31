@@ -264,11 +264,14 @@ MonoBehaviour:
   inputJump: 0
   inputDash: 0
   inputGrab: 0
+  playerbools: 00000000000000
+  playerboolFuncs: 00000000000000
   x: 0
   y: 0
   xRaw: 0
   yRaw: 0
-  isFreeControl: 1
+  changePoint: 0.1
+  isFreeControl: 0
 --- !u!114 &2286383222940826369
 MonoBehaviour:
   m_ObjectHideFlags: 0

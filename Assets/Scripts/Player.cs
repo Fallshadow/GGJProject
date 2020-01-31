@@ -21,6 +21,8 @@ public class Player : MonoBehaviour
     public float yRaw = 0;
     public float changePoint = 0.9f;
     public bool isFreeControl = true;
+    private bool btnJump = false;
+    private bool btnDash = false;
     private MoveFunction moveFunction = null;
     void Awake()
     {
@@ -99,6 +101,12 @@ public class Player : MonoBehaviour
             if (Input.GetButton("Jump"))
             {
                 inputJump = true;
+                btnJump = true;
+            }
+            if (Input.GetButtonUp("Jump"))
+            {
+                inputJump = false;
+                btnJump = false;
             }
             if (Input.GetButton("Fire3"))
             {
@@ -107,8 +115,13 @@ public class Player : MonoBehaviour
             if (Input.GetButton("Fire1"))
             {
                 inputDash = true;
+                btnDash = true;
             }
-
+            if (Input.GetButtonUp("Fire1"))
+            {
+                inputDash = false;
+                btnDash = false;
+            }
             playerbools = new bool[7]
             {
                 inputLeft ,
@@ -133,13 +146,13 @@ public class Player : MonoBehaviour
             }
             if (inputUp)
             {
-                x = 1;
-                xRaw = 1;
+                y = 1;
+                yRaw = 1;
             }
             if (inputDown)
             {
-                x = -1;
-                xRaw = -1;
+                y = -1;
+                yRaw = -1;
             }
             dir = new Vector2(x,y);
             moveFunction.Walk(dir);
@@ -164,6 +177,7 @@ public class Player : MonoBehaviour
     {
         foreach (var commend in CommendMgr.instance.playerCommends)
         {
+            bool hadChange = false;
             foreach (int item in commend)
             {
                 playerboolFuncs[item] = true;
@@ -172,11 +186,27 @@ public class Player : MonoBehaviour
             {
                 if (playerbools[item] == true)
                 {
+                    if (item == 4)
+                    {
+                        if (!btnJump) continue;
+                    }
+                    if (item == 5)
+                    {
+                        if (!btnDash)continue;
+                    }
                     foreach (int citem in commend)
                     {
                         playerbools[citem] = true;
                     }
+                    hadChange = true;
                     break;
+                }
+            }
+            if(!hadChange)
+            {
+                foreach (int citem in commend)
+                {
+                    playerbools[citem] = false;
                 }
             }
         }
