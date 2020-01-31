@@ -12,6 +12,7 @@ public enum LEVEL_NAME
 public struct LevelStruct
 {
     public Vector2 StartPos;
+    public int leftTime;
 }
 public class LevelMgr : SingletonMonoBehaviorNoDestroy<LevelMgr>
 {
@@ -55,15 +56,18 @@ public static class LevelConfig
     {
         new LevelStruct
         {
-            StartPos = new Vector2(-10, 0)
+            StartPos = new Vector2(-10, 0),
+            leftTime = 2
         },
         new LevelStruct
         {
-            StartPos = new Vector2(-10, 0)
+            StartPos = new Vector2(-10, 0),
+            leftTime = 2
         },
         new LevelStruct
         {
-            StartPos = new Vector2(-10, 0)
+            StartPos = new Vector2(-10, 0),
+            leftTime = 3
         },
     };
 

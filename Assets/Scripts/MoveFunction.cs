@@ -13,7 +13,7 @@ public class MoveFunction : MonoBehaviour
     public bool canMoveTRG = true;
     public bool canMoveLeftTRG = true;
     public bool canMoveRightTRG = true;
-    public bool canJumpTRG = false;
+    public bool canJumpTRG = true;
     public bool canDashTRG = true;
     public bool canGrabTRG = true;
     public bool canGrabLeftTRG = true;
@@ -231,7 +231,7 @@ public class MoveFunction : MonoBehaviour
         canMoveTRG = true;
         canMoveLeftTRG = true;
         canMoveRightTRG = true;
-        canJumpTRG = false;
+        canJumpTRG = true;
         canDashTRG = true;
         canGrabTRG = true;
         canGrabLeftTRG = true;

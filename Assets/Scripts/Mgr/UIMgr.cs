@@ -19,9 +19,10 @@ public class UIMgr : SingletonMonoBehaviorNoDestroy<UIMgr>
         dictUI.TryGetValue(name,out goui);
         if(goui == null)
         {
-            goui = Resources.Load(PrefabPathConfig.PrefabFolder + name) as GameObject;
+            goui = Instantiate(Resources.Load(PrefabPathConfig.PrefabFolder + name) as GameObject,MainRoot);
             dictUI.Add(name,goui);
         }
-        Instantiate(goui,MainRoot);
+        goui.SetActive(true);
+        goui.transform.SetAsLastSibling();
     }
 }

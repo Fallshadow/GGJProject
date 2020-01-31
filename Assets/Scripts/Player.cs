@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     public bool inputDash = false;
     public bool inputGrab = false;
     public bool[] playerbools = new bool[7];
+    public bool[] playerboolFuncs = new bool[7];
     public float x = 0;
     public float y = 0;
     public float xRaw = 0;
@@ -161,8 +162,12 @@ public class Player : MonoBehaviour
 
     public void CheckMergeInput()
     {
-        foreach (int[] commend in CommendMgr.instance.playerCommends)
+        foreach (var commend in CommendMgr.instance.playerCommends)
         {
+            foreach (int item in commend)
+            {
+                playerboolFuncs[item] = true;
+            }
             foreach (int item in commend)
             {
                 if (playerbools[item] == true)
@@ -171,9 +176,11 @@ public class Player : MonoBehaviour
                     {
                         playerbools[citem] = true;
                     }
+                    break;
                 }
             }
         }
+        SetFunc();
         SetBools();
     }
 
@@ -186,5 +193,14 @@ public class Player : MonoBehaviour
         inputJump  = playerbools[4];
         inputDash  = playerbools[5];
         inputGrab  = playerbools[6];  
+    }
+    public void SetFunc()
+    {
+
+  moveFunction.canMoveLeftTRG          =playerboolFuncs[0];
+  moveFunction.canMoveRightTRG         =playerboolFuncs[1];
+  moveFunction.canJumpTRG              =playerboolFuncs[4];
+  moveFunction.canDashTRG              =playerboolFuncs[5];
+  moveFunction.canGrabTRG              =playerboolFuncs[6];
     }
 }
