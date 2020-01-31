@@ -21,8 +21,8 @@ public class Player : MonoBehaviour
     public float yRaw = 0;
     public float changePoint = 0.9f;
     public bool isFreeControl = true;
-    private bool btnJump = false;
-    private bool btnDash = false;
+    public bool btnJump = false;
+    public bool btnDash = false;
     private MoveFunction moveFunction = null;
     void Awake()
     {
@@ -43,8 +43,6 @@ public class Player : MonoBehaviour
         xRaw = Input.GetAxisRaw("Horizontal");
         yRaw = Input.GetAxisRaw("Vertical");
         Vector2 dir = new Vector2(x, y);
-        moveFunction.ReSide(x);
-        moveFunction.SetCommonThing();
 
         if (isFreeControl)
         {
@@ -68,32 +66,32 @@ public class Player : MonoBehaviour
             inputJump = false;
             inputGrab = false;
             inputDash = false;
-            if(x < -changePoint)
+            if(xRaw < -changePoint)
             {
                 inputLeft = true;
                 inputRight = false;
             }
-            if(x == 0)
+            if(xRaw == 0)
             {
                 inputLeft = false;
                 inputRight = false;
             }
-            if(x > changePoint)
+            if(xRaw > changePoint)
             {
                 inputLeft = false;
                 inputRight = true;
             }
-            if(y > changePoint)
+            if(yRaw > changePoint)
             {
                 inputUp = true;
                 inputDown = false;
             }
-            if(y == 0)
+            if(yRaw == 0)
             {
                 inputUp = false;
                 inputDown = false;
             }
-            if(y < -changePoint)
+            if(yRaw < -changePoint)
             {
                 inputUp = false;
                 inputDown = true;
@@ -133,7 +131,8 @@ public class Player : MonoBehaviour
                 inputGrab ,
             };
             CheckMergeInput();
-
+        moveFunction.ReSide(x);
+        moveFunction.SetCommonThing();
             if (inputLeft)
             {
                 x = -1;
