@@ -13,6 +13,7 @@ public struct LevelStruct
 {
     public Vector2 StartPos;
     public int leftTime;
+    public int FuncGroove;
 }
 public class LevelMgr : SingletonMonoBehaviorNoDestroy<LevelMgr>
 {
@@ -30,24 +31,31 @@ public class LevelMgr : SingletonMonoBehaviorNoDestroy<LevelMgr>
     }
     public void LoadNectLevel()
     {
+        UIMgr.instance.DestoryAllUi();
         if(curLevel ==LEVEL_NAME.LN_LEVEL2)
         {
-            SceneManager.LoadScene(0);
             curLevel = LEVEL_NAME.LN_START;
+            SceneManager.LoadScene(0);
             return;
         }
         LEVEL_NAME level = curLevel + 1;
-        SceneManager.LoadScene((int)level);
-        UIMgr.instance.DestoryAllUi();
-        UIMgr.instance.GetUI(PrefabPathConfig.MainGameTip);
         curLevel = level;
         curStruct = LevelConfig.levelStructs[(int)curLevel];
+        if(curLevel != LEVEL_NAME.LN_START)
+        {
+            UIMgr.instance.GetUI(PrefabPathConfig.MainGameTip);
+        }
         RestartCurLevel();
+        SceneManager.LoadScene((int)level);
+
     }
 
     public void RestartCurLevel()
     {
         player.transform.position = curStruct.StartPos;
+        CommendMgr.instance.playerCommends.Clear();
+        CommendMgr.instance.curSelectFunc.Clear();
+        EventManager.instance.Send(EventGroup.GAME,(short)GameEvent.RestartGame);
     }
 }
 
@@ -58,17 +66,20 @@ public static class LevelConfig
         new LevelStruct
         {
             StartPos = new Vector2(-10, 0),
-            leftTime = 2
+            leftTime = 2,
+            FuncGroove = 4,
         },
         new LevelStruct
         {
             StartPos = new Vector2(-10, 0),
-            leftTime = 2
+            leftTime = 2,
+            FuncGroove = 3,
         },
         new LevelStruct
         {
             StartPos = new Vector2(-10, 0),
-            leftTime = 3
+            leftTime = 3,
+            FuncGroove = 4,
         },
     };
 

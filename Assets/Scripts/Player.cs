@@ -153,6 +153,12 @@ public class Player : MonoBehaviour
                 y = -1;
                 yRaw = -1;
             }
+                        if(inputLeft == inputRight && inputRight == true)
+            {
+                x=0;
+                xRaw = 0;
+            }
+            
             dir = new Vector2(x,y);
             moveFunction.Walk(dir);
             if (inputJump)
@@ -174,6 +180,23 @@ public class Player : MonoBehaviour
 
     public void CheckMergeInput()
     {
+        if(CommendMgr.instance.playerCommends.Count == 0)
+        {
+            playerbools[0] = false;
+            playerbools[1] = false;
+            playerbools[2] = false;
+            playerbools[3] = false;
+            playerbools[4] = false;
+            playerbools[5] = false;
+            playerbools[6] = false;
+            playerboolFuncs[0] = false;
+            playerboolFuncs[1] = false;
+            playerboolFuncs[2] = false;
+            playerboolFuncs[3] = false;
+            playerboolFuncs[4] = false;
+            playerboolFuncs[5] = false;
+            playerboolFuncs[6] = false;
+        }
         foreach (var commend in CommendMgr.instance.playerCommends)
         {
             bool hadChange = false;

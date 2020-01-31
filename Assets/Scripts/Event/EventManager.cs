@@ -1,7 +1,6 @@
 ﻿using System;
 
-namespace act.evt
-{
+
     public class EventManager : Singleton<EventManager>
     {
         public static int CombineId(short hi, short lo)
@@ -101,4 +100,3 @@ namespace act.evt
             eventHandler.Send(CombineId((short)groupId, eventId), arg1, agr2, agr3, arg4, arg5);
         }
     }
-}

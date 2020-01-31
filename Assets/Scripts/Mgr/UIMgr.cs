@@ -19,10 +19,18 @@ public class UIMgr : SingletonMonoBehaviorNoDestroy<UIMgr>
         dictUI.TryGetValue(name,out goui);
         if(goui == null)
         {
-            goui = Instantiate(Resources.Load(PrefabPathConfig.PrefabFolder + name) as GameObject,MainRoot);
+            goui = Resources.Load(PrefabPathConfig.PrefabFolder + name) as GameObject;
             dictUI.Add(name,goui);
         }
+        Instantiate(goui,MainRoot);
         goui.SetActive(true);
         goui.transform.SetAsLastSibling();
+    }
+
+    public Sprite GetFuncBtnSprite(int number)
+    {
+        string path = PrefabPathConfig.SpriteFolder + PrefabPathConfig.SpriteFuncBtnName + number.ToString();
+        Sprite sprite = Resources.Load<Sprite>(path);
+        return sprite;
     }
 }

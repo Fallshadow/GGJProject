@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace act.evt
-{
+
     // Note: 事件的簽章會以第一個註冊的函式為準。
     // Note: 如果Delegate被清空之後註冊一個不同簽章的函式，不會導致exception，但會使原來發送的事件接收不到。
     public class EventHandler
@@ -213,4 +212,3 @@ namespace act.evt
             callbackDict.Clear();
         }
     }
-}
