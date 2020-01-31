@@ -360,6 +360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97b594e03765f6443aac002d4af0f853, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  curSelectFunc: 
 --- !u!114 &881393646
 MonoBehaviour:
   m_ObjectHideFlags: 0

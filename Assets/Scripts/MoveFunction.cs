@@ -18,6 +18,7 @@ public class MoveFunction : MonoBehaviour
     public bool canGrabTRG = true;
     public bool canGrabLeftTRG = true;
     public bool canGrabRightTRG = true;
+    public bool canDashUni = false;
 
     [Space]
     [Header("移动功能参数")]
@@ -85,7 +86,7 @@ public class MoveFunction : MonoBehaviour
     /// <param name="dir"></param>
     public void Jump(Vector2 dir)
     {
-        if (!coll.onGround)
+        if (!coll.onGround || !canJumpTRG)
         {
             return;
         }
@@ -113,7 +114,11 @@ public class MoveFunction : MonoBehaviour
     {
         if(!canDashTRG || hasDashed)
         {
-            return;
+            if(!canDashUni)
+            {
+                return;
+            }
+            
         }
         Camera.main.transform.DOComplete();
         Camera.main.transform.DOShakePosition(.2f, .5f, 14, 90, false, true);

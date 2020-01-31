@@ -14,6 +14,7 @@ public struct LevelStruct
     public Vector2 StartPos;
     public int leftTime;
     public int FuncGroove;
+    public bool canDashUni;
 }
 public class LevelMgr : SingletonMonoBehaviorNoDestroy<LevelMgr>
 {
@@ -67,19 +68,20 @@ public static class LevelConfig
         {
             StartPos = new Vector2(-10, 0),
             leftTime = 2,
-            FuncGroove = 4,
+            FuncGroove = 4,canDashUni = false,
         },
         new LevelStruct
         {
             StartPos = new Vector2(-10, 0),
             leftTime = 2,
-            FuncGroove = 3,
+            FuncGroove = 3,canDashUni = false,
         },
         new LevelStruct
         {
             StartPos = new Vector2(-10, 0),
             leftTime = 3,
             FuncGroove = 4,
+            canDashUni = true,
         },
     };
 

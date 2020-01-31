@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     public bool inputDash = false;
     public bool inputGrab = false;
     public bool[] playerbools = new bool[7];
-    public bool[] playerboolFuncs = new bool[7];
+    public bool[] playerboolFuncs = new bool[8];
     public float x = 0;
     public float y = 0;
     public float xRaw = 0;
@@ -254,5 +254,7 @@ public class Player : MonoBehaviour
   moveFunction.canJumpTRG              =playerboolFuncs[4];
   moveFunction.canDashTRG              =playerboolFuncs[5];
   moveFunction.canGrabTRG              =playerboolFuncs[6];
+moveFunction.canDashUni = LevelMgr.instance.curStruct.canDashUni;
     }
+
 }
