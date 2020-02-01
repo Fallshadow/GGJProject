@@ -1,16 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System;
 
 public class CoreGameMgr : SingletonMonoBehaviorNoDestroy<CoreGameMgr>
 {
-    
-    private void Start() {
-        
+
+    private void Start()
+    {
+
     }
+
     public void Victory()
     {
-        LevelMgr.instance.LoadNectLevel();
+        if (!Dialog.instance.ExecuteBlock((int)LevelMgr.instance.curLevel + "-" + "end", () => LevelMgr.instance.LoadNectLevel()))
+        {
+            LevelMgr.instance.LoadNectLevel();
+        }
     }
 
     public void Failed()
