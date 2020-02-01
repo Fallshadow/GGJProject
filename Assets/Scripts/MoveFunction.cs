@@ -26,14 +26,19 @@ public class MoveFunction : MonoBehaviour
     public float jumpForce = 50;
     public float slideSpeed = 5;
     public float dashSpeed = 20;
+    public float jumpParam = 0.8f;
+public float waittime = 0.3f;
 
     [Space]
     [Header("当前状态")]
+    public bool canMove = true;
     public bool OnWallGrab = false;
     public bool OnWallWalk = false;
     public bool isDashing = false;
     public bool hasDashed = false;
     public bool groundTouch = false;
+    public bool isSlider = false;
+    public bool walljump = false;
 
     private Rigidbody2D rb = null;
     private Collion coll = null;
@@ -88,13 +93,31 @@ public class MoveFunction : MonoBehaviour
     {
         if (!coll.onGround || !canJumpTRG)
         {
+            if(!coll.onWall)
             return;
         }
+        if(!coll.onGround && coll.onWall)
+        {
+                    StopCoroutine(DisableMovement(0));
+        StartCoroutine(DisableMovement(waittime));
+            rb.velocity = new Vector2(0, 0);
+            rb.velocity += (Vector2.up / jumpParam + (new Vector2(-(coll.onRightWall? 1: -1),0)) / jumpParam) * jumpForce;
+            animScript.SetJumpParam();
+            animScript.SetSide(-(int)myside);
+            walljump = true;
+        }
+        else{
         rb.velocity = new Vector2(rb.velocity.x, 0);
         rb.velocity += dir * jumpForce;
         animScript.SetJumpParam();
+        }
     }
-
+    IEnumerator DisableMovement(float time)
+    {
+        canMove = false;
+        yield return new WaitForSeconds(time);
+        canMove = true;
+    }
     /// <summary>
     /// GrabWall功能
     /// </summary>
@@ -159,6 +182,8 @@ public class MoveFunction : MonoBehaviour
             hasDashed = false;
         }
     }
+
+    public float myside = 0;
     /// <summary>
     /// 转换方向
     /// </summary>
@@ -168,11 +193,14 @@ public class MoveFunction : MonoBehaviour
         if (x > 0)
         {
             side = 1;
+            myside = side;
         }
         if (x < 0)
         {
             side = -1;
+            myside = side;
         }
+        
         animScript.SetSide(side);
     }
 
@@ -208,6 +236,10 @@ public class MoveFunction : MonoBehaviour
             {
                 WallSlide();
             }
+            else
+            {
+                isSlider = false;
+            }
         }
         OnWallWalk = y != 0 ? true : false;
         if (OnWallGrab)
@@ -219,6 +251,7 @@ public class MoveFunction : MonoBehaviour
         }
         else
         {
+            
             rb.gravityScale = 3;
         }
         animScript.SetGrabParam(OnWallGrab,OnWallWalk);
@@ -246,13 +279,20 @@ public class MoveFunction : MonoBehaviour
     }
     private void WallSlide()
     {
+        if(walljump)
+        {
+            walljump = false;
+            return ;
+        }
         bool pushingWall = false;
         if ((rb.velocity.x > 0 && coll.onRightWall) || (rb.velocity.x < 0 && coll.onLeftWall))
         {
             pushingWall = true;
+            isSlider = true;
         }
         float push = pushingWall ? 0 : rb.velocity.x;
 
         rb.velocity = new Vector2(push, -slideSpeed);
+        
     }
 }

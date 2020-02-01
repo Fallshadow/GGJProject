@@ -13,6 +13,7 @@ public enum LEVEL_NAME
     LN_LEVEL5,
     LN_LEVEL6,
     LN_LEVEL7,
+    LN_LEVEL8,
 }
 public struct LevelStruct
 {
@@ -27,7 +28,8 @@ public class LevelMgr : SingletonMonoBehaviorNoDestroy<LevelMgr>
     public LevelStruct curStruct;
     [HideInInspector]
     public GameObject player = null;
-    private void Start() {
+    private void Start()
+    {
         player = GameObject.Find("Player");
     }
     public void LoadLevel(LEVEL_NAME level)
@@ -38,7 +40,7 @@ public class LevelMgr : SingletonMonoBehaviorNoDestroy<LevelMgr>
     public void LoadNectLevel()
     {
         UIMgr.instance.DestoryAllUi();
-        if(curLevel ==LEVEL_NAME.LN_LEVEL4)
+        if (curLevel == LEVEL_NAME.LN_LEVEL8)
         {
             curLevel = LEVEL_NAME.LN_START;
             curLevel = curLevel + 1;
@@ -51,7 +53,7 @@ public class LevelMgr : SingletonMonoBehaviorNoDestroy<LevelMgr>
         LEVEL_NAME level = curLevel + 1;
         curLevel = level;
         curStruct = LevelConfig.levelStructs[(int)curLevel];
-        if(curLevel != LEVEL_NAME.LN_START)
+        if (curLevel != LEVEL_NAME.LN_START)
         {
             UIMgr.instance.GetUI(PrefabPathConfig.MainGameTip);
         }
@@ -62,28 +64,28 @@ public class LevelMgr : SingletonMonoBehaviorNoDestroy<LevelMgr>
         //StartCoroutine(_restart());
         RestartCurLevel();
         SceneManager.LoadScene((int)curLevel);
-
+        //AnimPlay.instance.PlayInScene();
+    }
+    IEnumerator _restart()
+    {
+        yield return new WaitForEndOfFrame();
+        EventManager.instance.Send(EventGroup.GAME, (short)GameEvent.RestartGame);
 
     }
-IEnumerator _restart()
-{yield return new WaitForEndOfFrame();
-        EventManager.instance.Send(EventGroup.GAME,(short)GameEvent.RestartGame);
-        
-}
     public void RestartCurLevel()
     {
         player.transform.position = curStruct.StartPos;
         player.GetComponent<Player>().ResetPlayer();
         CommendMgr.instance.playerCommends.Clear();
         CommendMgr.instance.curSelectFunc.Clear();
-        
+
         StartCoroutine(_restart());
     }
 }
 
 public static class LevelConfig
 {
-    public static LevelStruct[] levelStructs = new LevelStruct[5]
+    public static LevelStruct[] levelStructs = new LevelStruct[9]
     {
         new LevelStruct
         {
@@ -112,6 +114,31 @@ public static class LevelConfig
             canDashUni = false,
         },
         new LevelStruct
+        {
+            StartPos = new Vector2(-19.6f, 0),
+            //leftTime = 3,
+            FuncGroove = 4,
+            canDashUni = false,
+        },
+                new LevelStruct
+        {
+            StartPos = new Vector2(-19.6f, 0),
+            //leftTime = 3,
+            FuncGroove = 4,
+            canDashUni = false,
+        },        new LevelStruct
+        {
+            StartPos = new Vector2(0, 0),
+            //leftTime = 3,
+            FuncGroove = 4,
+            canDashUni = false,
+        },        new LevelStruct
+        {
+            StartPos = new Vector2(-10, 0),
+            //leftTime = 3,
+            FuncGroove = 4,
+            canDashUni = false,
+        },        new LevelStruct
         {
             StartPos = new Vector2(-10, 0),
             //leftTime = 3,

@@ -43,6 +43,10 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        if(!moveFunction.canMove)
+        {
+            return;
+        }
         x = Input.GetAxis("Horizontal");
         y = Input.GetAxis("Vertical");
         xRaw = Input.GetAxisRaw("Horizontal");
@@ -101,6 +105,7 @@ public class Player : MonoBehaviour
                 inputUp = false;
                 inputDown = true;
             }
+
             if (Input.GetButton("Jump"))
             {
                 inputJump = true;
@@ -136,8 +141,8 @@ public class Player : MonoBehaviour
                 inputGrab ,
             };
             CheckMergeInput();
-        moveFunction.ReSide(x);
-        moveFunction.SetCommonThing();
+            moveFunction.ReSide(x);
+            moveFunction.SetCommonThing();
             if (inputLeft)
             {
                 x = -1;

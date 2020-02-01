@@ -37,6 +37,33 @@ public class FuncGrooveItem : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         {
             return;
         }
+        string showText = "";
+        foreach (var item in CommendMgr.instance.curSelectFunc)
+        {    
+            switch (item)
+            {
+                case 0:
+                    showText += "←";
+                    break;
+                case 1:
+                    showText += "→";
+                    break;
+                case 2:
+                    showText += "↑";
+                    break;
+                case 3:
+                    showText += "↓";
+                    break;
+                case 4:
+                    showText += "跳";
+                    break;
+                case 5:
+                    showText += "冲";
+                    break;
+                default:
+                    break;
+            }
+        }
         CommendMgr.instance.AddCurPlayerCommend();
         EventManager.instance.Send(EventGroup.UI,(short)UiEvent.UseGroove);
         isUsed = true;

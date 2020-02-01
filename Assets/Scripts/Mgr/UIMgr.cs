@@ -10,7 +10,7 @@ public class UIMgr : SingletonMonoBehaviorNoDestroy<UIMgr>
     {
         foreach (Transform item in MainRoot)
         {
-            Destroy(item.gameObject);
+            item.gameObject.SetActive(false);
         }
     }
     public void GetUI(string name)
@@ -20,9 +20,14 @@ public class UIMgr : SingletonMonoBehaviorNoDestroy<UIMgr>
         if(goui == null)
         {
             goui = Resources.Load(PrefabPathConfig.PrefabFolder + name) as GameObject;
+            Instantiate(goui,MainRoot);
             dictUI.Add(name,goui);
         }
-        Instantiate(goui,MainRoot);
+        else
+        {
+        goui = MainRoot.Find(name + "(Clone)").gameObject;
+
+        }
         goui.SetActive(true);
         goui.transform.SetAsLastSibling();
     }

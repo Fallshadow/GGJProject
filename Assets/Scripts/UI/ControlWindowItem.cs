@@ -53,6 +53,7 @@ public class ControlWindowItem : MonoBehaviour
 
     public void RefreshShow()
     {
+        funcBtnContent = transform.Find("HorizontalFuncBtns");
         for (int i = 0; i < funcBtnContent.childCount; i++)
         {
             Destroy(funcBtnContent.GetChild(i).gameObject);

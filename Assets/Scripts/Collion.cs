@@ -54,7 +54,8 @@ public class Collion : MonoBehaviour
     {
         if(other.transform.tag == "victoryDoor")
         {
-            CoreGameMgr.instance.Victory();
+            LevelMgr.instance.LoadNectLevel();
+            //AnimPlay.instance.PlayOutScene();
         }
     }
 }

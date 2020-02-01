@@ -12,6 +12,19 @@ public class AnimScript : MonoBehaviour
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
+    /// <summary>
+    /// Start is called on the frame when a script is enabled just before
+    /// any of the Update methods is called the first time.
+    /// </summary>
+    void Start()
+    {
+        EventManager.instance.Register<bool>(EventGroup.GAME,(short)GameEvent.isPushBox,SetPushBox);
+        EventManager.instance.Register(EventGroup.GAME,(short)GameEvent.PlayerDie,SetDieParam);
+    }
+    private void OnDestroy() {
+        EventManager.instance.Unregister<bool>(EventGroup.GAME,(short)GameEvent.isPushBox,SetPushBox);
+        EventManager.instance.Unregister(EventGroup.GAME,(short)GameEvent.PlayerDie,SetDieParam);
+    }
     public void SetMoveParam(float x, float y)
     {
         animator.SetFloat("HorizontalAxis", x);
@@ -55,6 +68,10 @@ public class AnimScript : MonoBehaviour
             this.side = side;
         }
         spriteRenderer.flipX = this.side == 1 ? false : true;
+    }
+    public void SetPushBox(bool ispush)
+    {
+        animator.SetBool("IsPush",ispush);
     }
 
     public void Fail()

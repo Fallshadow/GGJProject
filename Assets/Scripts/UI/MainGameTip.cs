@@ -8,26 +8,23 @@ public class MainGameTip : MonoBehaviour
     public FuncGrooveItem[] funcGrooveItems;
     public ControlWindowItem controlWindowItem = null;
     public Text leftTime = null;
+
+    
     public void RestartLevel()
     {
-        LevelMgr.instance.RestartCurLevel();
+        EventManager.instance.Send(EventGroup.GAME,(short)GameEvent.PlayerDie);
     }
 
     public void Refresh()
     {
-        // leftTime.text = "剩余可用融合次数： " + LevelMgr.instance.curStruct.leftTime.ToString();
-        StartCoroutine(_Refresh());
-    }
-    IEnumerator _Refresh()
-    {
-        yield return new WaitForEndOfFrame();
-        for (int i = 0; i < funcGrooveItems.Length; i++)
+                for (int i = 0; i < funcGrooveItems.Length; i++)
         {
             funcGrooveItems[i].Refresh();
             funcGrooveItems[i].Init(LevelMgr.instance.curStruct.FuncGroove < i + 1);
         }
         controlWindowItem.RefreshShow();
     }
+
 
     public void OpenMergeWindow()
     {

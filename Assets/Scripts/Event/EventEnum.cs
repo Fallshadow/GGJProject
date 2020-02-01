@@ -24,6 +24,10 @@
     {
         NONE = 0,
         RestartGame,
+        isPushBox,
+        PlayerDie,
+        OutScene,
+        InScene,
 
     }
 
