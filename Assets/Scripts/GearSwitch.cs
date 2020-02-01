@@ -18,19 +18,22 @@ public class GearSwitch : MonoBehaviour
     /// </summary>
     public virtual bool Triggered { get { return triggered; } }
 
-    public void Trigger()
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!triggered)
+        if (collision.tag == "Player")
         {
-            for (var i = 0; i < gears.Count; ++i)
+            if (!triggered)
             {
-                var gear = gears[i];
-                if (gear != null)
+                for (var i = 0; i < gears.Count; ++i)
                 {
-                    gear.Trigger();
+                    var gear = gears[i];
+                    if (gear != null)
+                    {
+                        gear.Trigger();
+                    }
                 }
+                triggered = true;
             }
-            triggered = true;
         }
     }
 }
