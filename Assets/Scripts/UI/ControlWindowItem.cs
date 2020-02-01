@@ -9,25 +9,54 @@ public class ControlWindowItem : MonoBehaviour
     public InputField inputField = null;
     public Transform funcBtnContent = null;
     public GameObject funcTemplate = null;
+    public Button openhideBtn = null;
     [Header("Dotween Setting")]
     public Ease ease = Ease.InOutBack;
+    public Ease ease2 = Ease.Linear;
     public bool isShowing = false;
     public float showY = 0;
     public float hideY = 0;
     public float duration = 0.7f;
+    public GameObject groovewinObject = null;
+    public bool alsoFuncGrooveWin = false;
+
+    public float showGrooveWinY = 0;
+    public float hideGrooveWinY = 0;
     public GameObject DestoryFunc = null;
-    
+
     public void Show()
     {
+
         EventManager.instance.Register(EventGroup.UI,(short)UiEvent.UseGroove,RefreshShow);
+        EventManager.instance.Register(EventGroup.UI,(short)UiEvent.AlwaysOpenConwin,AlwaysOpenControlWindow);
+        EventManager.instance.Register(EventGroup.UI,(short)UiEvent.CanCloseConwin,CanHideControlWindow);
+        if(alsoFuncGrooveWin)
+        {
+            groovewinObject.transform.DOLocalMoveY(showGrooveWinY,duration).SetEase(ease2);
+        }
         transform.DOLocalMoveY(showY,duration).SetEase(ease);
         RefreshShow();
     }
     public void Hide()
     {
         EventManager.instance.Unregister(EventGroup.UI,(short)UiEvent.UseGroove,RefreshShow);
+        EventManager.instance.Unregister(EventGroup.UI,(short)UiEvent.AlwaysOpenConwin,AlwaysOpenControlWindow);
+        EventManager.instance.Unregister(EventGroup.UI,(short)UiEvent.CanCloseConwin,CanHideControlWindow);
+        if(alsoFuncGrooveWin)
+        {
+            groovewinObject.transform.DOLocalMoveY(hideGrooveWinY,duration).SetEase(ease2);
+        }
         transform.DOLocalMoveY(hideY,duration).SetEase(ease);
         CommendMgr.instance.curSelectFunc.Clear();
+    }
+
+    public void AlwaysOpenControlWindow()
+    {
+        openhideBtn.interactable = false;
+    }
+    public void CanHideControlWindow()
+    {
+        openhideBtn.interactable = true;
     }
     public void ChangeState()
     {

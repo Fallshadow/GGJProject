@@ -18,6 +18,8 @@
         ControlFuncSelect,
         ControlFuncUnSelect,
         UseGroove,
+        AlwaysOpenConwin,
+        CanCloseConwin,
     }
     
     public enum GameEvent : short

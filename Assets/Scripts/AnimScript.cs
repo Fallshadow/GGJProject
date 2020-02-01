@@ -48,6 +48,7 @@ public class AnimScript : MonoBehaviour
     }
     public void SetDieParam()
     {
+        transform.parent.GetComponent<Player>().isAlive = false;
         animator.SetTrigger("Die");
         
     }

@@ -8,7 +8,7 @@ public class MainGameTip : MonoBehaviour
     public FuncGrooveItem[] funcGrooveItems;
     public ControlWindowItem controlWindowItem = null;
     public Text leftTime = null;
-
+    public string emotiontext = "";
     
     public void RestartLevel()
     {
@@ -46,6 +46,10 @@ public void closeTo()
 public void awayTo()
 {
     FindObjectOfType<FollowPlayer>().AwayToPlayerPos();
+}
+public void emotion()
+{
+    Debug.Log(CommendMgr.instance.AddEmotionMode(emotiontext));
 }
 
 }

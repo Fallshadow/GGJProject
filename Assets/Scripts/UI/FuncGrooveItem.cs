@@ -15,13 +15,15 @@ public class FuncGrooveItem : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     public Image forbidImage = null;
     public Color activeColor;
     public Color neactiveColor;
+    public Text functext = null;
+
     void Awake()
     {
-        EventManager.instance.Register(EventGroup.UI, (short)UiEvent.CURSORENDFRAG, useGroove);
+        EventManager.instance.Register<string>(EventGroup.UI, (short)UiEvent.CURSORENDFRAG, useGroove);
     }
     private void OnDestroy()
     {
-        EventManager.instance.Unregister(EventGroup.UI, (short)UiEvent.CURSORENDFRAG, useGroove);
+        EventManager.instance.Unregister<string>(EventGroup.UI, (short)UiEvent.CURSORENDFRAG, useGroove);
     }
 
     public void Init(bool forbid)
@@ -30,9 +32,17 @@ public class FuncGrooveItem : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         isForbid = forbid;
         forbidImage.gameObject.SetActive(isForbid);
         isUsed = isForbid;
+        functext.text = "";
     }
-    private void useGroove()
+    public void useGroove(string text = "")
     {
+        if(text != "")
+        {
+            functext.text = text;
+                    isUsed = true;
+        SetNeactiveColor();
+            return;
+        }
         if (!MouseEnter || isUsed)
         {
             return;
@@ -40,6 +50,7 @@ public class FuncGrooveItem : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         string showText = "";
         foreach (var item in CommendMgr.instance.curSelectFunc)
         {    
+            
             switch (item)
             {
                 case 0:
@@ -61,9 +72,11 @@ public class FuncGrooveItem : MonoBehaviour, IPointerEnterHandler, IPointerExitH
                     showText += "冲";
                     break;
                 default:
-                    break;
+                continue;
             }
+            showText += "|";
         }
+        functext.text = showText.Remove(showText.Length - 1,1);
         CommendMgr.instance.AddCurPlayerCommend();
         EventManager.instance.Send(EventGroup.UI,(short)UiEvent.UseGroove);
         isUsed = true;

@@ -91,4 +91,19 @@ public class CommendMgr : SingletonMonoBehaviorNoDestroy<CommendMgr>
             LevelMgr.instance.curStruct.leftTime--;
         }
     }
+
+    public List<string> emotionlist = new List<string>();
+    public bool AddEmotionMode(string text)
+    {
+        FuncGrooveItem[] items = FindObjectOfType<MainGameTip>().funcGrooveItems;
+        foreach (var item in items)
+        {
+            if(!item.isUsed && !item.isForbid)
+            {
+                item.useGroove(text);
+                return true;
+            }
+        }
+        return false;
+    }
 }

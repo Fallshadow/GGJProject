@@ -48,7 +48,7 @@ public class ControlFuncBtn : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndD
             return;
         }
         Cursor.SetCursor(null,Vector2.zero,CursorMode.Auto);
-        EventManager.instance.Send(EventGroup.UI,(short)UiEvent.CURSORENDFRAG);
+        EventManager.instance.Send<string>(EventGroup.UI,(short)UiEvent.CURSORENDFRAG,"");
     }
 
     public void OnBeginDrag(PointerEventData eventData)
