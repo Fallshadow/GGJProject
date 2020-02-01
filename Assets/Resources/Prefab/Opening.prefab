@@ -217,7 +217,7 @@ MonoBehaviour:
   showStartTime: 1
   showSpeed: 0.5
   showMode: 1
-  soundEffect: {fileID: 8300000, guid: fcaf29b97b53ea0418d6fe2637fc13fc, type: 3}
+  soundEffect: {fileID: 8300000, guid: bd8f3e3ed9b90124a92008cee50d74d4, type: 3}
   showDurationTime: 2
   fadeSpeed: 0.4
 --- !u!82 &9004749422500444183

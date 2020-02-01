@@ -43,15 +43,18 @@ public class Opening : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_showFinished && (Input.anyKeyDown|| _keyDown))
+        if (_showFinished)
         {
-            _keyDown = true;
-            var delta = fadeSpeed * Time.deltaTime;
-            var alpha = Mathf.MoveTowards(_canvasGroup.alpha, 0, delta);
-            _canvasGroup.alpha = alpha;
-            if (alpha <= 0)
+            if (Input.anyKeyDown || _keyDown)
             {
-                gameObject.SetActive(false);
+                _keyDown = true;
+                var delta = fadeSpeed * Time.deltaTime;
+                var alpha = Mathf.MoveTowards(_canvasGroup.alpha, 0, delta);
+                _canvasGroup.alpha = alpha;
+                if (alpha <= 0)
+                {
+                    gameObject.SetActive(false);
+                }
             }
         }
         else
@@ -66,7 +69,7 @@ public class Opening : MonoBehaviour
                             if (soundEffect != null && !_audioSource.isPlaying)
                             {
                                 _audioSource.clip = soundEffect;
-                                _audioSource.pitch = soundEffect.length / (1f / showSpeed);
+                                //_audioSource.pitch = soundEffect.length / (1f / showSpeed);
                                 _audioSource.Play();
                             }
                             _text.text = showStatement;
@@ -88,7 +91,7 @@ public class Opening : MonoBehaviour
                             if (soundEffect != null && !_audioSource.isPlaying)
                             {
                                 _audioSource.clip = soundEffect;
-                                _audioSource.pitch = soundEffect.length / (showStatement.Length / (showSpeed * 10f));
+                                //_audioSource.pitch = soundEffect.length / (showStatement.Length / (showSpeed * 10f));
                                 _audioSource.Play();
                             }
                             _textCanvasGroup.alpha = 1f;
@@ -98,7 +101,7 @@ public class Opening : MonoBehaviour
                                 _text.text = showStatement.Substring(0, (int)_textSubLength);
                                 if (_textSubLength >= showStatement.Length)
                                 {
-                                    _audioSource.Stop();
+                                     _audioSource.Stop();
                                     _showFinished = true;
                                 }
                             }
