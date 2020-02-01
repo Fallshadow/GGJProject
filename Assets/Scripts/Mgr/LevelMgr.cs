@@ -8,6 +8,11 @@ public enum LEVEL_NAME
     LN_START = 0,
     LN_LEVEL1,
     LN_LEVEL2,
+    LN_LEVEL3,
+    LN_LEVEL4,
+    LN_LEVEL5,
+    LN_LEVEL6,
+    LN_LEVEL7,
 }
 public struct LevelStruct
 {
@@ -33,10 +38,14 @@ public class LevelMgr : SingletonMonoBehaviorNoDestroy<LevelMgr>
     public void LoadNectLevel()
     {
         UIMgr.instance.DestoryAllUi();
-        if(curLevel ==LEVEL_NAME.LN_LEVEL2)
+        if(curLevel ==LEVEL_NAME.LN_LEVEL4)
         {
             curLevel = LEVEL_NAME.LN_START;
-            SceneManager.LoadScene(0);
+            curLevel = curLevel + 1;
+            curStruct = LevelConfig.levelStructs[(int)curLevel];
+            UIMgr.instance.GetUI(PrefabPathConfig.MainGameTip);
+            RestartCurLevel();
+            SceneManager.LoadScene(1);
             return;
         }
         LEVEL_NAME level = curLevel + 1;
@@ -46,46 +55,68 @@ public class LevelMgr : SingletonMonoBehaviorNoDestroy<LevelMgr>
         {
             UIMgr.instance.GetUI(PrefabPathConfig.MainGameTip);
         }
-        StartCoroutine(_restart());
+        else
+        {
+            UIMgr.instance.GetUI(PrefabPathConfig.Opening);
+        }
+        //StartCoroutine(_restart());
+        RestartCurLevel();
+        SceneManager.LoadScene((int)curLevel);
 
 
     }
 IEnumerator _restart()
-{yield return new WaitForSeconds(0.2f);
-        RestartCurLevel();
-        SceneManager.LoadScene((int)curLevel);
+{yield return new WaitForEndOfFrame();
+        EventManager.instance.Send(EventGroup.GAME,(short)GameEvent.RestartGame);
+        
 }
     public void RestartCurLevel()
     {
         player.transform.position = curStruct.StartPos;
+        player.GetComponent<Player>().ResetPlayer();
         CommendMgr.instance.playerCommends.Clear();
         CommendMgr.instance.curSelectFunc.Clear();
-        EventManager.instance.Send(EventGroup.GAME,(short)GameEvent.RestartGame);
+        
+        StartCoroutine(_restart());
     }
 }
 
 public static class LevelConfig
 {
-    public static LevelStruct[] levelStructs = new LevelStruct[3]
+    public static LevelStruct[] levelStructs = new LevelStruct[5]
     {
         new LevelStruct
         {
             StartPos = new Vector2(-10, 0),
-            leftTime = 2,
+            //leftTime = 2,
             FuncGroove = 4,canDashUni = false,
         },
         new LevelStruct
         {
             StartPos = new Vector2(-10, 0),
-            leftTime = 2,
-            FuncGroove = 3,canDashUni = false,
+            //leftTime = 2,
+            FuncGroove = 4,canDashUni = false,
         },
         new LevelStruct
         {
             StartPos = new Vector2(-10, 0),
-            leftTime = 3,
+            //leftTime = 3,
             FuncGroove = 4,
-            canDashUni = true,
+            canDashUni = false,
+        },
+        new LevelStruct
+        {
+            StartPos = new Vector2(-10, 0),
+            //leftTime = 3,
+            FuncGroove = 4,
+            canDashUni = false,
+        },
+        new LevelStruct
+        {
+            StartPos = new Vector2(-10, 0),
+            //leftTime = 3,
+            FuncGroove = 4,
+            canDashUni = false,
         },
     };
 

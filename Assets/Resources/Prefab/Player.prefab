@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 2286383222142335425}
   m_Layer: 0
   m_Name: Collion
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -188,6 +188,7 @@ MonoBehaviour:
   bottomOffset: {x: 0, y: -0.4}
   rightOffset: {x: 0.4, y: -0.2}
   leftOffset: {x: -0.4, y: -0.2}
+  isDashing: 0
 --- !u!1 &2286383222940826374
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,7 +204,7 @@ GameObject:
   - component: {fileID: 2286383222940826371}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -243,7 +244,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &2286383222940826370
 MonoBehaviour:
@@ -272,6 +273,8 @@ MonoBehaviour:
   yRaw: 0
   changePoint: 0.1
   isFreeControl: 0
+  btnJump: 0
+  btnDash: 0
 --- !u!114 &2286383222940826369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,6 +295,7 @@ MonoBehaviour:
   canGrabTRG: 1
   canGrabLeftTRG: 1
   canGrabRightTRG: 1
+  canDashUni: 0
   speed: 7
   jumpForce: 12
   slideSpeed: 1

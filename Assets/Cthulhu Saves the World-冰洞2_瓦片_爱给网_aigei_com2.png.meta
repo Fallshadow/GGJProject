@@ -1,0 +1,1519 @@
+fileFormatVersion: 2
+guid: e66e39b298eb8e844b33970b9aaceeb9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_0"
+  - first:
+      213: 21300002
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_1"
+  - first:
+      213: 21300004
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_2"
+  - first:
+      213: 21300006
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_3"
+  - first:
+      213: 21300008
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_4"
+  - first:
+      213: 21300010
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_5"
+  - first:
+      213: 21300012
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_6"
+  - first:
+      213: 21300014
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_7"
+  - first:
+      213: 21300016
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_8"
+  - first:
+      213: 21300018
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_9"
+  - first:
+      213: 21300020
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_10"
+  - first:
+      213: 21300022
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_11"
+  - first:
+      213: 21300024
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_12"
+  - first:
+      213: 21300026
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_13"
+  - first:
+      213: 21300028
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_14"
+  - first:
+      213: 21300030
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_15"
+  - first:
+      213: 21300032
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_16"
+  - first:
+      213: 21300034
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_17"
+  - first:
+      213: 21300036
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_18"
+  - first:
+      213: 21300038
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_19"
+  - first:
+      213: 21300040
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_20"
+  - first:
+      213: 21300042
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_21"
+  - first:
+      213: 21300044
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_22"
+  - first:
+      213: 21300046
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_23"
+  - first:
+      213: 21300048
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_24"
+  - first:
+      213: 21300050
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_25"
+  - first:
+      213: 21300052
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_26"
+  - first:
+      213: 21300054
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_27"
+  - first:
+      213: 21300056
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_28"
+  - first:
+      213: 21300058
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_29"
+  - first:
+      213: 21300060
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_30"
+  - first:
+      213: 21300062
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_31"
+  - first:
+      213: 21300064
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_32"
+  - first:
+      213: 21300066
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_33"
+  - first:
+      213: 21300068
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_34"
+  - first:
+      213: 21300070
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_35"
+  - first:
+      213: 21300072
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_36"
+  - first:
+      213: 21300074
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_37"
+  - first:
+      213: 21300076
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_38"
+  - first:
+      213: 21300078
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_39"
+  - first:
+      213: 21300080
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_40"
+  - first:
+      213: 21300082
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_41"
+  - first:
+      213: 21300084
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_42"
+  - first:
+      213: 21300086
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_43"
+  - first:
+      213: 21300088
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_44"
+  - first:
+      213: 21300090
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_45"
+  - first:
+      213: 21300092
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_46"
+  - first:
+      213: 21300094
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_47"
+  - first:
+      213: 21300096
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_48"
+  - first:
+      213: 21300098
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_49"
+  - first:
+      213: 21300100
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_50"
+  - first:
+      213: 21300102
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_51"
+  - first:
+      213: 21300104
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_52"
+  - first:
+      213: 21300106
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_53"
+  - first:
+      213: 21300108
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_54"
+  - first:
+      213: 21300110
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_55"
+  - first:
+      213: 21300112
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_56"
+  - first:
+      213: 21300114
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_57"
+  - first:
+      213: 21300116
+    second: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_58"
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_0"
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 716012d9bbad178449d3d4588b3c541a
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_1"
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 187533a3b6dc44e4597296777db58e4b
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_2"
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 179a6d36bdd1e8b48885bd2a462bb91d
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_3"
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e261b8080450bfc46a6b02aa34696c50
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_4"
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c292f21d6b24834c9017fea1a0ef46f
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_5"
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54d2c4f3b8a0b4748a43e1f074d49422
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_6"
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 158de46e0a49b044694513f355f11bff
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_7"
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f664720c45c4c841acbc1e9d6c2f9cf
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_8"
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f7723c159811ab409303bdf5d39b71e
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_9"
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dafa17c79c8be2548893fea9f00abc6b
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_10"
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe1b21deb88e14145908220f9d0d9a31
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_11"
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c263d6d1dc6637a4ea8ed7adc746a569
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_12"
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c798deaa8469114a9f6696191b34a81
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_13"
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14a0d6a7db53e094fa56ac52bf9819dd
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_14"
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c17960e584c29849a6bff7e18f05815
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_15"
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eabc93df1deca74ea3c76f82740bccd
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_16"
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f89cfa0ed206a854f9700e92f297c0f9
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_17"
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25701f6c08dd73a4ba41aacae74f0a9e
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_18"
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8825d6629ea005b4899415bdc0d53eee
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_19"
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e862e52c1d06f054c87c14067f16ce31
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_20"
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96c21da2728578e43adba6e9ec9f8f9e
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_21"
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53b27d1618c3b5640a38d5d756dfb25e
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_22"
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02c71c1341922544bbd22dc0db5ca8fd
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_23"
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9be133e702e6c554eafd1c376bfd64e0
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_24"
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ef5128f833a01e49acc8995a8e46871
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_25"
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0fde5b1f5e190445929ab101fc42f8f
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_26"
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1da5dd17d5b88f04d870d4b46e1293be
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_27"
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1c3ffb4c8142b54aac0426944241f94
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_28"
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58b4386fb0ba91e41b0d9893fe209ce8
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_29"
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8555c309c2c7ce14ea4b1a53503f9eaf
+      internalID: 21300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_30"
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a3a82dcfd5c7634eb953997db161627
+      internalID: 21300060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_31"
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bd29ea5583430f4a93aba9a864c4239
+      internalID: 21300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_32"
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1101a09daf2ad2d4aafa6bac46777d51
+      internalID: 21300064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_33"
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6bb9e696dfb2ec489ce15d9ffabe70c
+      internalID: 21300066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_34"
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47f03d9df7ecffa40843f2ccdf0fdcee
+      internalID: 21300068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_35"
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dec22343ace897b4a9bd8ef3b7879253
+      internalID: 21300070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_36"
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f6e77338a7931742903eed540f5ad14
+      internalID: 21300072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_37"
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6c39a36b70171e46a06793970b62016
+      internalID: 21300074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_38"
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdf56db713839614f93e7f02dbd8d873
+      internalID: 21300076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_39"
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1ed1ba054d4c674bb32df3a38e38ecd
+      internalID: 21300078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_40"
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28081e28bc5b84048bcfbb850ac45128
+      internalID: 21300080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_41"
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dbb36ea3c989ce469c87f99629c8735
+      internalID: 21300082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_42"
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7d92a935276ead48b957e02b1920b34
+      internalID: 21300084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_43"
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d78490b7004528f409ff7068048bdcec
+      internalID: 21300086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_44"
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 293d193bd5104de42b7fffbd4403d971
+      internalID: 21300088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_45"
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8fd48322070fed4eb9f34805920defa
+      internalID: 21300090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_46"
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84d7b95c90eb1f4409aa491a0b1dfa1d
+      internalID: 21300092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_47"
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be1f7e7c1c360d94a91c61813e2bf8bc
+      internalID: 21300094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_48"
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 525ce7d32f4c8d64ba21cb111c301c2f
+      internalID: 21300096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_49"
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b40540996974e1941af6fc01c6c67171
+      internalID: 21300098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_50"
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b969a0ec9ce0894e92ece93ee9b803c
+      internalID: 21300100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_51"
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0583d8037419e04ba1e72395fe1ff88
+      internalID: 21300102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_52"
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb0a02b947d8fb240a2beb6b5853ad8b
+      internalID: 21300104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_53"
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dfc38c6ef40e794cba08155d799b7f9
+      internalID: 21300106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_54"
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23ed45dc6edd67c4bba160bc33e45c56
+      internalID: 21300108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_55"
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98bd0709d8fa8e2448dcba0549cb4553
+      internalID: 21300110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_56"
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dfc0ba1da3cdba42b0e0ac43e379ea8
+      internalID: 21300112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_57"
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 301d064296f3f6a449b91dbe0eee6ccc
+      internalID: 21300114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Cthulhu Saves the World-\u51B0\u6D1E2_\u74E6\u7247_\u7231\u7ED9\u7F51_aigei_com2_58"
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c12fe23d95a0dc14a96c6fc1198a6ea9
+      internalID: 21300116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: d6c34b6d8fe4b0540b485da50258b3de
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

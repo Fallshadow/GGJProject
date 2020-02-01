@@ -22,7 +22,8 @@ public class Collion : MonoBehaviour
     public float collisionRadius = 0.25f;
     public Vector2 bottomOffset, rightOffset, leftOffset;
     private Color debugCollisionColor = Color.red;
-
+    [Header("PlayerState")]
+    public bool isDashing = false;
     void Update()
     {
         onGround = Physics2D.OverlapCircle((Vector2)transform.position + bottomOffset,collisionRadius,groundLayer);
@@ -51,10 +52,6 @@ public class Collion : MonoBehaviour
     /// <param name="other">The Collision2D data associated with this collision.</param>
     void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.transform.tag == "needles")
-        {
-            CoreGameMgr.instance.Failed();
-        }
         if(other.transform.tag == "victoryDoor")
         {
             CoreGameMgr.instance.Victory();

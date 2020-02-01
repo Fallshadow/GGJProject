@@ -18,11 +18,16 @@ public enum ControlCommand
 public class ControlMgr : SingletonMonoBehaviorNoDestroy<ControlMgr>
 {
     public List<ControlCommand> UnLockFunc = new List<ControlCommand>();
+    public List<string> nameEnum = new List<string>();
     private List<string> UnLockFuncName = new List<string>();
     private void Start() {
         var fields = typeof(ControlCommand).GetFields(BindingFlags.Static | BindingFlags.Public);
 
-        foreach (var fi in fields)UnLockFuncName.Add(fi.Name);
+        foreach (var fi in fields)
+        {
+            UnLockFuncName.Add(fi.Name);
+            nameEnum.Add(fi.Name);
+        }
     }
     public bool InputCommand(string text)
     {

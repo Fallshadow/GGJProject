@@ -53,6 +53,7 @@ public class Opening : MonoBehaviour
                 _canvasGroup.alpha = alpha;
                 if (alpha <= 0)
                 {
+                    LevelMgr.instance.LoadNectLevel();
                     gameObject.SetActive(false);
                 }
             }

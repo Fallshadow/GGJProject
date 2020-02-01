@@ -8,6 +8,7 @@ public static class PrefabPathConfig
 
     public static readonly string MainGameTip = "MainGameTip";
     public static readonly string MergeWindow = "MergeWindow";
+    public static readonly string Opening = "Opening";
 
 
 

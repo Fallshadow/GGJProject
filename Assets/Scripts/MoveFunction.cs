@@ -122,7 +122,8 @@ public class MoveFunction : MonoBehaviour
         }
         Camera.main.transform.DOComplete();
         Camera.main.transform.DOShakePosition(.2f, .5f, 14, 90, false, true);
-        //FindObjectOfType<RippleEffect>().Emit(Camera.main.WorldToViewportPoint(transform.position));
+        FindObjectOfType<RippleEffect>().Emit(Camera.main.WorldToViewportPoint(transform.position));
+        FindObjectOfType<GhostTrail>().ShowGhost();
 
         hasDashed = true;
 
@@ -140,7 +141,7 @@ public class MoveFunction : MonoBehaviour
         rb.gravityScale = 0;
         isDashing = true;
         betterJump.enabled = false;
-        yield return new WaitForSeconds(.7f);
+        yield return new WaitForSeconds(.3f);
         rb.gravityScale = 3;
         isDashing = false;
         betterJump.enabled = true;
@@ -186,6 +187,7 @@ public class MoveFunction : MonoBehaviour
     /// </summary>
     public void SetCollision(float x,float y)
     {
+        coll.isDashing = isDashing;
         if (coll.onGround && !groundTouch)
         {
             hasDashed = false;

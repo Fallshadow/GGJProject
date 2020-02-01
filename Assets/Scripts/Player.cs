@@ -23,7 +23,12 @@ public class Player : MonoBehaviour
     public bool isFreeControl = true;
     public bool btnJump = false;
     public bool btnDash = false;
+    public bool isAlive = true;
     private MoveFunction moveFunction = null;
+    public void ResetPlayer()
+    {
+        isAlive = true;
+    }
     void Awake()
     {
         DontDestroyOnLoad(this);
@@ -55,7 +60,7 @@ public class Player : MonoBehaviour
             {
                 moveFunction.GrabWall();
             }
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetKeyDown(KeyCode.LeftControl))
             {
                 if(xRaw != 0 || yRaw != 0)
                     moveFunction.Dash(new Vector2(xRaw,yRaw));
@@ -110,12 +115,12 @@ public class Player : MonoBehaviour
             {
                 inputGrab = true;
             }
-            if (Input.GetButton("Fire1"))
+            if (Input.GetKey(KeyCode.LeftControl))
             {
                 inputDash = true;
                 btnDash = true;
             }
-            if (Input.GetButtonUp("Fire1"))
+            if (Input.GetKeyUp(KeyCode.LeftControl))
             {
                 inputDash = false;
                 btnDash = false;
@@ -195,7 +200,7 @@ public class Player : MonoBehaviour
             playerboolFuncs[3] = false;
             playerboolFuncs[4] = false;
             playerboolFuncs[5] = false;
-            playerboolFuncs[6] = false;
+            playerboolFuncs[6] = true;
         }
         foreach (var commend in CommendMgr.instance.playerCommends)
         {

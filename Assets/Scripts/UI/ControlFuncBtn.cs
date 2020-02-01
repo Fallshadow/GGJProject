@@ -7,8 +7,9 @@ using UnityEngine.EventSystems;
 public class ControlFuncBtn : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHandler
 {
     public Texture2D texture2D;
+    public Text name = null;
     public ControlCommand controlCommand = ControlCommand.left;
-    private Image icon = null;
+    public Image icon = null;
     public bool Selected = false;
     public Image SelectedImage = null;
     void Start()
@@ -19,9 +20,9 @@ public class ControlFuncBtn : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndD
     public void Init(ControlCommand controlCommand)
     {
         gameObject.SetActive(true);
-        icon = GetComponent<Image>();
         this.controlCommand = controlCommand;
         icon.sprite = UIMgr.instance.GetFuncBtnSprite((int)controlCommand);
+        name.text = ControlMgr.instance.nameEnum[(int)controlCommand];
     }
 
     public void Select()

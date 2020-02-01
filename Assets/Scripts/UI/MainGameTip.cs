@@ -16,6 +16,11 @@ public class MainGameTip : MonoBehaviour
     public void Refresh()
     {
         // leftTime.text = "剩余可用融合次数： " + LevelMgr.instance.curStruct.leftTime.ToString();
+        StartCoroutine(_Refresh());
+    }
+    IEnumerator _Refresh()
+    {
+        yield return new WaitForEndOfFrame();
         for (int i = 0; i < funcGrooveItems.Length; i++)
         {
             funcGrooveItems[i].Refresh();
@@ -30,9 +35,20 @@ public class MainGameTip : MonoBehaviour
     }
 private void Start() {
     EventManager.instance.Register(EventGroup.GAME,(short)GameEvent.RestartGame,Refresh);
+    
 }
 private void OnDestroy() {
     EventManager.instance.Unregister(EventGroup.GAME,(short)GameEvent.RestartGame,Refresh);
+    
+}
+
+public void closeTo()
+{
+    FindObjectOfType<FollowPlayer>().CloseToPlayerPos();
+}
+public void awayTo()
+{
+    FindObjectOfType<FollowPlayer>().AwayToPlayerPos();
 }
 
 }

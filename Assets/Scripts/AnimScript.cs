@@ -5,7 +5,7 @@ using UnityEngine;
 public class AnimScript : MonoBehaviour
 {
     private Animator animator = null;
-    private SpriteRenderer spriteRenderer = null;
+    public SpriteRenderer spriteRenderer = null;
     [SerializeField] private int side = 1;
     void Awake()
     {
@@ -21,6 +21,7 @@ public class AnimScript : MonoBehaviour
     public void SetCommonParam(float yVel)
     {
         animator.SetFloat("VerticalSpeed", yVel);
+        animator.SetBool("IsAlive",transform.parent.GetComponent<Player>().isAlive);
     }
 
     public void SetCollisionParam(bool onGround,bool onWall)
@@ -31,6 +32,11 @@ public class AnimScript : MonoBehaviour
     public void SetJumpParam()
     {
         animator.SetTrigger("JumpTrg");
+    }
+    public void SetDieParam()
+    {
+        animator.SetTrigger("Die");
+        
     }
     public void SetDashParam()
     {
@@ -49,5 +55,14 @@ public class AnimScript : MonoBehaviour
             this.side = side;
         }
         spriteRenderer.flipX = this.side == 1 ? false : true;
+    }
+
+    public void Fail()
+    {
+        CoreGameMgr.instance.Failed();
+    }
+    public void Victory()
+    {
+        CoreGameMgr.instance.Victory();
     }
 }
