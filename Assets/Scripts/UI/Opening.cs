@@ -25,8 +25,8 @@ public class Opening : MonoBehaviour
     private CanvasGroup _textCanvasGroup;
     private float _textSubLength;
     private float _textAlpha;
-    private float _lastedTime;
     private bool _showFinished;
+    private bool _keyDown;
 
     void Awake()
     {
@@ -36,17 +36,16 @@ public class Opening : MonoBehaviour
         _textSubLength = 0;
         _textCanvasGroup = _text.GetComponent<CanvasGroup>();
         _textCanvasGroup.alpha = _textAlpha = 0f;
-        _lastedTime = 0f;
         _showFinished = false;
+        _keyDown = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (_showFinished)
+        if (_showFinished && (Input.anyKeyDown|| _keyDown))
         {
-            _lastedTime += Time.deltaTime;
-            if (_lastedTime < showDurationTime) return;
+            _keyDown = true;
             var delta = fadeSpeed * Time.deltaTime;
             var alpha = Mathf.MoveTowards(_canvasGroup.alpha, 0, delta);
             _canvasGroup.alpha = alpha;
@@ -64,7 +63,7 @@ public class Opening : MonoBehaviour
                 {
                     case ShowMode.FadeIn:
                         {
-                            if (!_audioSource.isPlaying)
+                            if (soundEffect != null && !_audioSource.isPlaying)
                             {
                                 _audioSource.clip = soundEffect;
                                 _audioSource.pitch = soundEffect.length / (1f / showSpeed);
@@ -86,7 +85,7 @@ public class Opening : MonoBehaviour
                         break;
                     case ShowMode.Typewriter:
                         {
-                            if (!_audioSource.isPlaying)
+                            if (soundEffect != null && !_audioSource.isPlaying)
                             {
                                 _audioSource.clip = soundEffect;
                                 _audioSource.pitch = soundEffect.length / (showStatement.Length / (showSpeed * 10f));
