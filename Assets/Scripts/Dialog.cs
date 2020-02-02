@@ -153,6 +153,7 @@ public class Dialog : SingletonMonoBehaviorNoDestroy<Dialog>
     }
     public void AnimAwake()
     {
+        FindObjectOfType<AnimScript>().awake();
     }
 
     void Update()
