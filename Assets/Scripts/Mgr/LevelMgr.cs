@@ -85,6 +85,7 @@ public class LevelMgr : SingletonMonoBehaviorNoDestroy<LevelMgr>
             Dialog.instance.ExecuteBlock((int) curLevel + "-init");
         }
         StartCoroutine(_restart());
+        LoadLevel(curLevel);
     }
 }
 

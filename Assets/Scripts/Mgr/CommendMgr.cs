@@ -129,6 +129,6 @@ public class CommendMgr : SingletonMonoBehaviorNoDestroy<CommendMgr>
 /// <returns></returns>
     public bool JudgeGoodOrBad()
     {
-        return emotionlist.Count==3;
+        return emotionlist.Count==4;
     }
 }

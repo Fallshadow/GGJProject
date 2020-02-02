@@ -164,6 +164,7 @@ public float waittime = 0.3f;
         rb.gravityScale = 0;
         isDashing = true;
         betterJump.enabled = false;
+        animScript.PlayAudio(0);
         yield return new WaitForSeconds(.3f);
         rb.gravityScale = 3;
         isDashing = false;
@@ -220,6 +221,7 @@ public float waittime = 0.3f;
         {
             hasDashed = false;
             groundTouch = true;
+            animScript.PlayAudio(1);
         }
         if(!coll.onGround && groundTouch)
         {

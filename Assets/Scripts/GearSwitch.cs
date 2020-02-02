@@ -9,6 +9,7 @@ public class GearSwitch : MonoBehaviour
     [Tooltip("是否已经触发")]
     [SerializeField]
     protected bool triggered = false;
+    public Sprite triggerSprite;
     /// <summary>
     /// 绑定的机关列表
     /// </summary>
@@ -33,6 +34,7 @@ public class GearSwitch : MonoBehaviour
                     }
                 }
                 triggered = true;
+                GetComponent<SpriteRenderer>().sprite = triggerSprite;
             }
         }
     }
