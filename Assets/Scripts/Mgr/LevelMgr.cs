@@ -39,10 +39,12 @@ public class LevelMgr : SingletonMonoBehaviorNoDestroy<LevelMgr>
     }
     public void LoadNectLevel()
     {
+        CommendMgr.instance.CheckEmotion();
         UIMgr.instance.DestoryAllUi();
         if (curLevel == LEVEL_NAME.LN_LEVEL8)
         {
             curLevel = LEVEL_NAME.LN_START;
+            CommendMgr.instance.emotionlist.Clear();
             curLevel = curLevel + 1;
             curStruct = LevelConfig.levelStructs[(int)curLevel];
             UIMgr.instance.GetUI(PrefabPathConfig.MainGameTip);
@@ -64,7 +66,7 @@ public class LevelMgr : SingletonMonoBehaviorNoDestroy<LevelMgr>
         //StartCoroutine(_restart());
         RestartCurLevel();
         SceneManager.LoadScene((int)curLevel);
-        //AnimPlay.instance.PlayInScene();
+        AnimPlay.instance.PlayInScene();
     }
     IEnumerator _restart()
     {

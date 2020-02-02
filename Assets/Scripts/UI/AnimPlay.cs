@@ -21,6 +21,10 @@ public class AnimPlay : SingletonMonoBehaviorNoDestroy<AnimPlay>
     {
         animator.Play("InScene");
     }
+    public void PlayBadEnd1()
+    {
+        animator.Play("BadEnd1");
+    }
 
     public void StartNextScene()
     {
