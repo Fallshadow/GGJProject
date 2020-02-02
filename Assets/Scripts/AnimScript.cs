@@ -35,6 +35,23 @@ public class AnimScript : MonoBehaviour
     {
         EventManager.instance.Register<bool>(EventGroup.GAME,(short)GameEvent.isPushBox,SetPushBox);
         EventManager.instance.Register(EventGroup.GAME,(short)GameEvent.PlayerDie,SetDieParam);
+        changeState();
+    }
+
+    public void changeState()
+    {
+        if(LevelMgr.instance.curLevel == LEVEL_NAME.LN_START||LevelMgr.instance.curLevel == LEVEL_NAME.LN_LEVEL1)
+        {
+            animator.Play("Sleep");
+        }
+    }
+    public void awake()
+    {
+        animator.SetBool("Awake",true);
+    }
+        public void sleep()
+    {
+        animator.SetBool("Awake",false);
     }
     private void OnDestroy() {
         EventManager.instance.Unregister<bool>(EventGroup.GAME,(short)GameEvent.isPushBox,SetPushBox);

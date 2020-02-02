@@ -51,6 +51,9 @@ public class LevelMgr : SingletonMonoBehaviorNoDestroy<LevelMgr>
             RestartCurLevel();
             SceneManager.LoadScene(1);
              CoreGameMgr.instance.hadDead = true;
+             
+             FindObjectOfType<AnimScript>().sleep();
+             FindObjectOfType<AnimScript>().changeState();
             return;
         }
         LEVEL_NAME level = curLevel + 1;
@@ -96,62 +99,64 @@ public static class LevelConfig
     {
         new LevelStruct
         {
-            StartPos = new Vector2(-10, 0),
+            StartPos = new Vector2(-12.55f, -4.374939f),
             //leftTime = 2,
             FuncGroove = 4,canDashUni = false,
         },
         new LevelStruct
         {
-            StartPos = new Vector2(-10, 0),
+            StartPos = new Vector2(-12.55f, -4.374939f),
             //leftTime = 2,
             FuncGroove = 4,canDashUni = false,
         },
-        new LevelStruct
-        {
-            StartPos = new Vector2(-10, 0),
-            //leftTime = 3,
-            FuncGroove = 4,
-            canDashUni = false,
-        },
-        new LevelStruct
-        {
-            StartPos = new Vector2(-10, 0),
-            //leftTime = 3,
-            FuncGroove = 4,
-            canDashUni = false,
-        },
-        new LevelStruct
-        {
-            StartPos = new Vector2(-19.6f, 0),
-            //leftTime = 3,
-            FuncGroove = 4,
-            canDashUni = false,
-        },
-                new LevelStruct
-        {
-            StartPos = new Vector2(-19.6f, 0),
-            //leftTime = 3,
-            FuncGroove = 4,
-            canDashUni = false,
-        },        new LevelStruct
-        {
-            StartPos = new Vector2(0, 0),
-            //leftTime = 3,
-            FuncGroove = 4,
-            canDashUni = false,
-        },        new LevelStruct
-        {
-            StartPos = new Vector2(-10, 0),
-            //leftTime = 3,
-            FuncGroove = 4,
-            canDashUni = false,
-        },        new LevelStruct
+
+          new LevelStruct
         {
             StartPos = new Vector2(-10, -0.8742946f),
             //leftTime = 3,
             FuncGroove = 4,
             canDashUni = false,
         },
+        new LevelStruct
+        {
+            StartPos = new Vector2(-12.25f, 0.1257082f),
+            //leftTime = 3,
+            FuncGroove = 4,
+            canDashUni = false,
+        },
+        new LevelStruct
+        {
+            StartPos = new Vector2(-16.76f, -1.874295f),
+            //leftTime = 3,
+            FuncGroove = 1,
+            canDashUni = false,
+        },
+        new LevelStruct
+        {
+            StartPos = new Vector2(-17.82f, -1.874297f),
+            //leftTime = 3,
+            FuncGroove = 3,
+            canDashUni = false,
+        },
+                new LevelStruct
+        {
+            StartPos = new Vector2(0.1f, -0.8742875f),
+            //leftTime = 3,
+            FuncGroove = 3,
+            canDashUni = false,
+        },        new LevelStruct
+        {
+            StartPos = new Vector2(-10.08f, 5.625066f),
+            //leftTime = 3,
+            FuncGroove = 3,
+            canDashUni = false,
+        },        new LevelStruct
+        {
+            StartPos = new Vector2(-10, 0),
+            //leftTime = 3,
+            FuncGroove = 4,
+            canDashUni = false,
+        },      
     };
 
 }
