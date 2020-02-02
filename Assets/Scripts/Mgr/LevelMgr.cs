@@ -50,6 +50,7 @@ public class LevelMgr : SingletonMonoBehaviorNoDestroy<LevelMgr>
             UIMgr.instance.GetUI(PrefabPathConfig.MainGameTip);
             RestartCurLevel();
             SceneManager.LoadScene(1);
+             CoreGameMgr.instance.hadDead = true;
             return;
         }
         LEVEL_NAME level = curLevel + 1;
@@ -146,7 +147,7 @@ public static class LevelConfig
             canDashUni = false,
         },        new LevelStruct
         {
-            StartPos = new Vector2(-10, 0),
+            StartPos = new Vector2(-10, -0.8742946f),
             //leftTime = 3,
             FuncGroove = 4,
             canDashUni = false,
