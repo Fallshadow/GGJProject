@@ -399,6 +399,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1344899094098321036, guid: 9f35440008d837b41a7e4adcc03569c3,
+        type: 3}
+      propertyPath: selectedBlocks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731574023887300148, guid: 9f35440008d837b41a7e4adcc03569c3,
+        type: 3}
+      propertyPath: nodeRect.x
+      value: 675.42566
+      objectReference: {fileID: 0}
     - target: {fileID: 2731574024130509616, guid: 9f35440008d837b41a7e4adcc03569c3,
         type: 3}
       propertyPath: m_LocalPosition.x
