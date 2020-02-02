@@ -66,7 +66,7 @@ public class Opening : MonoBehaviour
                 _canvasGroup.alpha = alpha;
                 if (alpha <= 0)
                 {
-                    
+                    Dialog.instance.ExecuteBlock("1-init");
                     gameObject.SetActive(false);
                 }
             }

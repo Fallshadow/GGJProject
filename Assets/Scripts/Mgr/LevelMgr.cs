@@ -80,7 +80,10 @@ public class LevelMgr : SingletonMonoBehaviorNoDestroy<LevelMgr>
         player.GetComponent<Player>().ResetPlayer();
         CommendMgr.instance.playerCommends.Clear();
         CommendMgr.instance.curSelectFunc.Clear();
-        Dialog.instance.ExecuteBlock((int)curLevel + "-init");
+        if (curLevel != LEVEL_NAME.LN_LEVEL1)
+        {
+            Dialog.instance.ExecuteBlock((int) curLevel + "-init");
+        }
         StartCoroutine(_restart());
     }
 }

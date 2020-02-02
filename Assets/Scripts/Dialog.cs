@@ -97,6 +97,17 @@ public class Dialog : SingletonMonoBehaviorNoDestroy<Dialog>
         _waitInput = true;
     }
 
+    public void LockControlWindow()
+    {
+        EventManager.instance.Send(EventGroup.UI, (short)UiEvent.AlwaysOpenConwin);
+    }
+
+    public void UnLockControlWindow()
+    {
+        EventManager.instance.Send(EventGroup.UI, (short)UiEvent.CanCloseConwin);
+    }
+
+
     public void PlayAnimation(AnimationClip clip)
     {
         _showAnimation.Stop();
