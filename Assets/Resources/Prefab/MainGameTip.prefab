@@ -3436,7 +3436,7 @@ MonoBehaviour:
   inputField: {fileID: 54131251219465548}
   funcBtnContent: {fileID: 6933394283415343432}
   funcTemplate: {fileID: 4721060506133284321}
-  openhideBtn: {fileID: 0}
+  openhideBtn: {fileID: 7108531805219363685}
   ease: 28
   ease2: 1
   isShowing: 0

@@ -10,8 +10,10 @@ public class Dialog : SingletonMonoBehaviorNoDestroy<Dialog>
     public float imageFadeSpeed = 1f;
     private Flowchart _flowchart;
     private Image _showImage;
+    private Image _showImageAround;
     private CanvasGroup _showImageCanvasGroup;
-    private Animation _showAnimation;
+    private CanvasGroup _showImageAroundCanvasGroup;
+    private Animator _showAnimator;
     private Text _showText;
     private bool _showImageFade;
     private float _targetAlpha;
@@ -23,8 +25,10 @@ public class Dialog : SingletonMonoBehaviorNoDestroy<Dialog>
         _targetAlpha = 1f;
         _flowchart = GetComponentInChildren<Flowchart>();
         _showImage = transform.Find("ShowPanel").Find("ShowImage").GetComponent<Image>();
-        _showAnimation = transform.Find("ShowPanel").Find("ShowImage").GetComponent<Animation>();
+        _showImageAround = transform.Find("ShowPanel").Find("ShowImageAround").GetComponent<Image>();
+        _showAnimator = _showImage.GetComponent<Animator>();
         _showImageCanvasGroup = _showImage.GetComponent<CanvasGroup>();
+        _showImageAroundCanvasGroup = _showImageAround.GetComponent<CanvasGroup>();
         _showImageCanvasGroup.alpha = 0f;
         _showText = transform.Find("ShowPanel").Find("ShowImage").Find("ShowText").GetComponent<Text>();
     }
@@ -41,6 +45,7 @@ public class Dialog : SingletonMonoBehaviorNoDestroy<Dialog>
     {
         if (sprite != null)
         {
+            _showAnimator.enabled = false;
             _showImage.sprite = sprite;
             _showImage.SetNativeSize();
             if (fade)
@@ -58,6 +63,21 @@ public class Dialog : SingletonMonoBehaviorNoDestroy<Dialog>
         {
             _showText.text = message;
         }
+    }
+
+    public void ShowImageAround(Sprite sprite)
+    {
+        if (sprite != null)
+        {
+            _showImageAround.sprite = sprite;
+            _showImageAround.SetNativeSize();
+            _showImageAroundCanvasGroup.alpha = 1f;
+        }
+    }
+
+    public void HideImageAround()
+    {
+        _showImageAroundCanvasGroup.alpha = 0f;
     }
 
     public void HideImage(bool fade = true)
@@ -99,21 +119,41 @@ public class Dialog : SingletonMonoBehaviorNoDestroy<Dialog>
 
     public void LockControlWindow()
     {
-        EventManager.instance.Send(EventGroup.UI, (short)UiEvent.AlwaysOpenConwin);
+        ControlWindowItem controlWindow = FindObjectOfType(typeof(ControlWindowItem)) as ControlWindowItem;
+        if (controlWindow != null)
+        {
+            controlWindow.AlwaysOpenControlWindow();
+        }
     }
 
     public void UnLockControlWindow()
     {
-        EventManager.instance.Send(EventGroup.UI, (short)UiEvent.CanCloseConwin);
+        ControlWindowItem controlWindow = FindObjectOfType(typeof(ControlWindowItem)) as ControlWindowItem;
+        if (controlWindow != null)
+        {
+            controlWindow.CanHideControlWindow();
+        }
     }
 
 
-    public void PlayAnimation(AnimationClip clip)
+    public void PlayAnimation(string stateName)
     {
-        _showAnimation.Stop();
-        _showAnimation.AddClip(clip, clip.name);
-        _showAnimation.clip = clip;
-        _showAnimation.Play(clip.name);
+        _showAnimator.enabled = true;
+        _showAnimator.Play(stateName);
+    }
+
+    public void JudgeGoodOrBad()
+    {
+        _flowchart.SetBooleanVariable("goodEnd",CommendMgr.instance.JudgeGoodOrBad());
+    }
+
+    public void JudgeHasDead()
+    {
+        _flowchart.SetBooleanVariable("hasDead", CoreGameMgr.instance.hadDead);
+    }
+    public void AnimAwake()
+    {
+        FindObjectOfType<AnimScript>().SetAwakeParam()
     }
 
     void Update()
