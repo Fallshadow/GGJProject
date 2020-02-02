@@ -2,7 +2,7 @@
 
 public class CoreGameMgr : SingletonMonoBehaviorNoDestroy<CoreGameMgr>
 {
-
+    public bool hadDead = false;
     private void Start()
     {
 

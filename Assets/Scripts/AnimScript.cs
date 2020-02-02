@@ -9,6 +9,7 @@ public class AnimScript : MonoBehaviour
     public AudioClip[] audioClips;
     public AudioSource audioSource;
     [SerializeField] private int side = 1;
+    
     public void PlayAudio(int index)
     {
         if(index == 0 || index == 2)
@@ -43,6 +44,10 @@ public class AnimScript : MonoBehaviour
     {
         animator.SetFloat("HorizontalAxis", x);
         animator.SetFloat("VerticalAxis", y);
+    }
+    public void SetAwakeParam()
+    {
+        animator.SetBool("Awake",true);
     }
 
     public void SetCommonParam(float yVel)

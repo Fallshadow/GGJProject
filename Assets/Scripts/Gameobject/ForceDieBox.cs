@@ -19,6 +19,8 @@ public class ForceDieBox : MonoBehaviour
             other.transform.GetComponent<Player>().isAlive = false;
             Debug.Log(other.contacts[0].normal);
             other.transform.GetComponent<Rigidbody2D>().velocity +=  other.contacts[0].normal*(-force);
+            CoreGameMgr.instance.hadDead = true;
+
         }
     }
 }
