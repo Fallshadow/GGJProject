@@ -6,7 +6,21 @@ public class AnimScript : MonoBehaviour
 {
     private Animator animator = null;
     public SpriteRenderer spriteRenderer = null;
+    public AudioClip[] audioClips;
+    public AudioSource audioSource;
     [SerializeField] private int side = 1;
+    public void PlayAudio(int index)
+    {
+        if(index == 0 || index == 2)
+        {
+            audioSource.volume = 0.5f;
+        }
+        else
+        {
+            audioSource.volume = 0.2f;
+        }
+        audioSource.PlayOneShot(audioClips[index]);
+    }
     void Awake()
     {
         animator = GetComponent<Animator>();
