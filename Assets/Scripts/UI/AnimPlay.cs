@@ -15,7 +15,7 @@ public class AnimPlay : SingletonMonoBehaviorNoDestroy<AnimPlay>
     }
     public void PlayOutScene()
     {
-        animator.Play("OutScence");
+        animator.Play("OutScene");
     }
     public void PlayInScene()
     {
