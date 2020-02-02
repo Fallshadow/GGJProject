@@ -44,6 +44,7 @@ public class AnimScript : MonoBehaviour
         {
             animator.Play("Sleep");
         }
+         FindObjectOfType<AnimScript>().awake();
     }
     public void awake()
     {

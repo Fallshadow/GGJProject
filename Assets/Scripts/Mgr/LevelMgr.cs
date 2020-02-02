@@ -54,6 +54,7 @@ public class LevelMgr : SingletonMonoBehaviorNoDestroy<LevelMgr>
              
              FindObjectOfType<AnimScript>().sleep();
              FindObjectOfType<AnimScript>().changeState();
+             FindObjectOfType<AnimScript>().awake();
             return;
         }
         LEVEL_NAME level = curLevel + 1;
