@@ -106,4 +106,29 @@ public class CommendMgr : SingletonMonoBehaviorNoDestroy<CommendMgr>
         }
         return false;
     }
+
+    public bool CheckEmotion()
+    {
+        if(LevelMgr.instance.curLevel == LEVEL_NAME.LN_START)return false;
+        FuncGrooveItem[] items = FindObjectOfType<MainGameTip>().funcGrooveItems;
+        foreach (var item in items)
+        {
+            if(item.hasEmotion)
+            {
+                emotionlist.Add(item.functext.text);
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+/// <summary>
+/// true 好  false 坏
+/// </summary>
+/// <returns></returns>
+    public bool JudgeGoodOrBad()
+    {
+        return emotionlist.Count==3;
+    }
 }

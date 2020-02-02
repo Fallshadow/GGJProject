@@ -39,7 +39,20 @@ public class Opening : MonoBehaviour
         _showFinished = false;
         _keyDown = false;
     }
-
+    /// <summary>
+    /// This function is called when the object becomes enabled and active.
+    /// </summary>
+    void OnEnable()
+    {
+        
+        StopCoroutine(_dashWait());
+        StartCoroutine(_dashWait());
+    }
+    IEnumerator _dashWait()
+    {
+        yield return new WaitForSeconds(0.2f);
+        LevelMgr.instance.LoadNectLevel();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -53,7 +66,7 @@ public class Opening : MonoBehaviour
                 _canvasGroup.alpha = alpha;
                 if (alpha <= 0)
                 {
-                    LevelMgr.instance.LoadNectLevel();
+                    
                     gameObject.SetActive(false);
                 }
             }

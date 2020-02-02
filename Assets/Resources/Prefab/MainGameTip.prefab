@@ -587,6 +587,7 @@ MonoBehaviour:
   activeColor: {r: 1, g: 1, b: 1, a: 1}
   neactiveColor: {r: 0.34762672, g: 0.38679248, b: 0.34482914, a: 1}
   functext: {fileID: 819716734275211475}
+  hasEmotion: 0
 --- !u!1 &1529624983130020033
 GameObject:
   m_ObjectHideFlags: 0
@@ -1481,6 +1482,7 @@ MonoBehaviour:
   activeColor: {r: 1, g: 1, b: 1, a: 1}
   neactiveColor: {r: 0.34762672, g: 0.38679248, b: 0.34482914, a: 1}
   functext: {fileID: 2815414224738648076}
+  hasEmotion: 0
 --- !u!1 &3396900629602139285
 GameObject:
   m_ObjectHideFlags: 0
@@ -1719,6 +1721,7 @@ MonoBehaviour:
   activeColor: {r: 1, g: 1, b: 1, a: 1}
   neactiveColor: {r: 0.34762672, g: 0.38679248, b: 0.34482914, a: 1}
   functext: {fileID: 79246850012092127}
+  hasEmotion: 0
 --- !u!1 &3952472037890485310
 GameObject:
   m_ObjectHideFlags: 0
@@ -2858,6 +2861,7 @@ MonoBehaviour:
   activeColor: {r: 1, g: 1, b: 1, a: 1}
   neactiveColor: {r: 0.34762672, g: 0.38679248, b: 0.34482914, a: 1}
   functext: {fileID: 8072795967417712104}
+  hasEmotion: 0
 --- !u!1 &6019083075566817573
 GameObject:
   m_ObjectHideFlags: 0

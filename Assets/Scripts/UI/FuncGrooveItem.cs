@@ -33,14 +33,18 @@ public class FuncGrooveItem : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         forbidImage.gameObject.SetActive(isForbid);
         isUsed = isForbid;
         functext.text = "";
+        hasEmotion = false;
     }
+    public bool hasEmotion = false;
     public void useGroove(string text = "")
     {
         if(text != "")
         {
             functext.text = text;
+
                     isUsed = true;
-        SetNeactiveColor();
+            SetNeactiveColor();
+            hasEmotion = true;
             return;
         }
         if (!MouseEnter || isUsed)

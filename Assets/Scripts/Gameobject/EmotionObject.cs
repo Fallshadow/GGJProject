@@ -13,7 +13,16 @@ public class EmotionObject : MonoBehaviour
 {
     public string emotionName = "";
     public EmotionType et = EmotionType.ET_THINK;
-
+/// <summary>
+/// Awake is called when the script instance is being loaded.
+/// </summary>
+void Awake()
+{
+    if(CommendMgr.instance.emotionlist.Count<(int)et)
+    {
+        Destroy(gameObject);
+    }
+}
     /// <summary>
     /// Sent when an incoming collider makes contact with this object's
     /// collider (2D physics only).
@@ -22,6 +31,7 @@ public class EmotionObject : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {
         if(other.transform.tag == "Player" ){
+
         }
     }
 }

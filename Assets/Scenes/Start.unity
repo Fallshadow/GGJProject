@@ -454,20 +454,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1770955528544297379, guid: 0c4710ed268e40541be77db5aa380567,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1770955528825726924, guid: 0c4710ed268e40541be77db5aa380567,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1770955528968548278, guid: 0c4710ed268e40541be77db5aa380567,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1770955529114548077, guid: 0c4710ed268e40541be77db5aa380567,
         type: 3}
@@ -528,6 +518,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameController
+      objectReference: {fileID: 0}
+    - target: {fileID: 7234180990227188532, guid: 0c4710ed268e40541be77db5aa380567,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c4710ed268e40541be77db5aa380567, type: 3}
