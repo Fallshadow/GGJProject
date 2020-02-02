@@ -11,11 +11,11 @@ public class AnimPlay : SingletonMonoBehaviorNoDestroy<AnimPlay>
     /// </summary>
     void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
     }
     public void PlayOutScene()
     {
-        animator.Play("OutScene");
+        animator.Play("OutScence");
     }
     public void PlayInScene()
     {
@@ -26,8 +26,5 @@ public class AnimPlay : SingletonMonoBehaviorNoDestroy<AnimPlay>
         animator.Play("BadEnd1");
     }
 
-    public void StartNextScene()
-    {
-        LevelMgr.instance.LoadNectLevel();
-    }
+
 }
