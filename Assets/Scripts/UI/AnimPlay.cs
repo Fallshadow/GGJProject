@@ -25,6 +25,12 @@ public class AnimPlay : SingletonMonoBehaviorNoDestroy<AnimPlay>
     {
         animator.Play("BadEnd1");
     }
-
-
+    public void PlayName()
+    {
+        animator.Play("Name");
+    }
+    public void PlayGoodName()
+    {
+        animator.Play("goodend");
+    }
 }

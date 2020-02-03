@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System.Linq;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -14,6 +15,8 @@ public enum LEVEL_NAME
     LN_LEVEL6,
     LN_LEVEL7,
     LN_LEVEL8,
+    LN_LEVEL9,
+    LN_LEVEL10,
 }
 public struct LevelStruct
 {
@@ -36,12 +39,25 @@ public class LevelMgr : SingletonMonoBehaviorNoDestroy<LevelMgr>
     {
         SceneManager.LoadScene((int)level);
         curLevel = level;
+        if(level == LEVEL_NAME.LN_LEVEL4)
+        AudioPlayMgr.instance.PlayBGM(1);
+        if(level == LEVEL_NAME.LN_LEVEL7)
+        AudioPlayMgr.instance.PlayBGM(2);
+        if(level == LEVEL_NAME.LN_LEVEL10)
+        AudioPlayMgr.instance.PlayBGM(3);
     }
+public void BadEnd()
+{
+    player.transform.position = curStruct.StartPos;
+    FindObjectOfType<AnimScript>().sleep();
+    AnimPlay.instance.PlayName();
+    FindObjectOfType<MoveFunction>().canMove = false;
+}
+
     public void LoadNectLevel()
     {
-        CommendMgr.instance.CheckEmotion();
         UIMgr.instance.DestoryAllUi();
-        if (curLevel == LEVEL_NAME.LN_LEVEL8)
+        if (curLevel == LEVEL_NAME.LN_LEVEL10)
         {
             curLevel = LEVEL_NAME.LN_START;
             CommendMgr.instance.emotionlist.Clear();
@@ -50,7 +66,7 @@ public class LevelMgr : SingletonMonoBehaviorNoDestroy<LevelMgr>
             UIMgr.instance.GetUI(PrefabPathConfig.MainGameTip);
             RestartCurLevel();
             SceneManager.LoadScene(1);
-             CoreGameMgr.instance.hadDead = true;
+             CoreGameMgr.instance.hadDead = false;
              
              FindObjectOfType<AnimScript>().sleep();
              FindObjectOfType<AnimScript>().changeState();
@@ -69,13 +85,32 @@ public class LevelMgr : SingletonMonoBehaviorNoDestroy<LevelMgr>
         }
         //StartCoroutine(_restart());
         RestartCurLevel();
-        SceneManager.LoadScene((int)curLevel);
         AnimPlay.instance.PlayInScene();
+        
     }
     IEnumerator _restart()
     {
         yield return new WaitForEndOfFrame();
         EventManager.instance.Send(EventGroup.GAME, (short)GameEvent.RestartGame);
+                if(curLevel == LEVEL_NAME.LN_LEVEL8)
+        {
+            
+            List<int> listint = new List<int>();
+            listint.Add(1);
+            listint.Add(4);
+            CommendMgr.instance.curSelectFunc = listint.ToList();
+             FuncGrooveItem[] items = FindObjectOfType<MainGameTip>().funcGrooveItems;
+            foreach (var item in items)
+            {
+                if(!item.isUsed && !item.isForbid)
+                {
+                    item.useGrooveLevelStart("");
+                    break;
+                }
+            }
+            
+        }
+
 
     }
     public void RestartCurLevel()
@@ -95,7 +130,7 @@ public class LevelMgr : SingletonMonoBehaviorNoDestroy<LevelMgr>
 
 public static class LevelConfig
 {
-    public static LevelStruct[] levelStructs = new LevelStruct[9]
+    public static LevelStruct[] levelStructs = new LevelStruct[11]
     {
         new LevelStruct
         {
@@ -156,7 +191,19 @@ public static class LevelConfig
             //leftTime = 3,
             FuncGroove = 4,
             canDashUni = false,
-        },      
+        },          new LevelStruct
+        {
+            StartPos = new Vector2(-15.1f, -5.3f),
+            //leftTime = 3,
+            FuncGroove = 4,
+            canDashUni = false,
+        },        new LevelStruct
+        {
+            StartPos = new Vector2(-6.7f, -5.3f),
+            //leftTime = 3,
+            FuncGroove = 4,
+            canDashUni = false,
+        },       
     };
 
 }

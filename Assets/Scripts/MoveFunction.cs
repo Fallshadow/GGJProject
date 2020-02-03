@@ -13,6 +13,8 @@ public class MoveFunction : MonoBehaviour
     public bool canMoveTRG = true;
     public bool canMoveLeftTRG = true;
     public bool canMoveRightTRG = true;
+    public bool canMoveUpTRG = true;
+    public bool canMoveDownTRG = true;
     public bool canJumpTRG = true;
     public bool canDashTRG = true;
     public bool canGrabTRG = true;
@@ -243,6 +245,11 @@ public float waittime = 0.3f;
                 isSlider = false;
             }
         }
+        if (!coll.onWall)
+        {
+                isSlider = false;
+         
+        }
         OnWallWalk = y != 0 ? true : false;
         if (OnWallGrab)
         {
@@ -257,6 +264,7 @@ public float waittime = 0.3f;
             rb.gravityScale = 3;
         }
         animScript.SetGrabParam(OnWallGrab,OnWallWalk);
+        animScript.SetSliderParam(isSlider);
     }
 
     /// <summary>
@@ -273,6 +281,8 @@ public float waittime = 0.3f;
         canMoveTRG = true;
         canMoveLeftTRG = true;
         canMoveRightTRG = true;
+        canMoveUpTRG = true;
+        canMoveDownTRG = true;
         canJumpTRG = true;
         canDashTRG = true;
         canGrabTRG = true;

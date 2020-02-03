@@ -130,5 +130,6 @@ public class CommendMgr : SingletonMonoBehaviorNoDestroy<CommendMgr>
     public bool JudgeGoodOrBad()
     {
         return emotionlist.Count==4;
+
     }
 }

@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class Dialog : SingletonMonoBehaviorNoDestroy<Dialog>
 {
+    public Image robotImage = null;
+    public Image playerImage = null;
     public float imageFadeSpeed = 1f;
     private Flowchart _flowchart;
     private Image _showImage;
@@ -32,7 +34,6 @@ public class Dialog : SingletonMonoBehaviorNoDestroy<Dialog>
         _showImageCanvasGroup.alpha = 0f;
         _showText = transform.Find("ShowPanel").Find("ShowImage").Find("ShowText").GetComponent<Text>();
     }
-
     public bool ExecuteBlock(string blockName, Action onComplete = null)
     {
         var block = _flowchart.FindBlock(blockName);
@@ -155,6 +156,10 @@ public class Dialog : SingletonMonoBehaviorNoDestroy<Dialog>
     {
         FindObjectOfType<AnimScript>().awake();
     }
+    public void BGMStart()
+    {
+        AudioPlayMgr.instance.PlayBGM(0);
+    }
 
     void Update()
     {
@@ -187,4 +192,35 @@ public class Dialog : SingletonMonoBehaviorNoDestroy<Dialog>
             }
         }
     }
+#region sscchange
+    public void ShowRobotImage(Sprite sprite,bool hidePlayer = true)
+    {
+        robotImage.gameObject.SetActive(true);
+        robotImage.sprite = sprite;
+        playerImage.gameObject.SetActive(hidePlayer);
+    }
+    public void ShowPlayerImage(Sprite sprite,bool hideRobot = true)
+    {
+        playerImage.gameObject.SetActive(true);
+        playerImage.sprite = sprite;
+        robotImage.gameObject.SetActive(hideRobot);
+    }
+    public void HideAllActImage()
+    {
+                playerImage.gameObject.SetActive(false);
+robotImage.gameObject.SetActive(false);
+    }
+    public void NextLevel()
+    {
+        AnimPlay.instance.PlayOutScene();
+    }
+
+    public void TurnToLeve1WithoutControl()
+    {
+        LevelMgr.instance.LoadLevel(LEVEL_NAME.LN_LEVEL1);
+        LevelMgr.instance.BadEnd();
+    }
+
+#endregion
+
 }

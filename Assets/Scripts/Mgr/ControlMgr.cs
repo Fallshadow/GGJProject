@@ -11,12 +11,14 @@ public enum ControlCommand
     down,
     jump,
     dash,
-    destory,
+    destroy,
     love,
     evol,
+    authorize,
 }
 public class ControlMgr : SingletonMonoBehaviorNoDestroy<ControlMgr>
 {
+    public GameObject buttonjumplevel = null;
     public List<ControlCommand> UnLockFunc = new List<ControlCommand>();
     public List<string> nameEnum = new List<string>();
     private List<string> UnLockFuncName = new List<string>();
@@ -50,6 +52,10 @@ public class ControlMgr : SingletonMonoBehaviorNoDestroy<ControlMgr>
         if(controlCommand == ControlCommand.evol)
         {
             
+        }
+        if(controlCommand == ControlCommand.authorize)
+        {
+            buttonjumplevel.gameObject.SetActive(true);
         }
         return true;
     }
