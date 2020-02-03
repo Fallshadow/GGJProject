@@ -89,12 +89,12 @@ public class ControlWindowItem : MonoBehaviour
         }
         foreach (var item in ControlMgr.instance.UnLockFunc)
         {
-            if(item == ControlCommand.destory)
+            if(item == ControlCommand.destroy)
             {
                 DestoryFunc.gameObject.SetActive(true);
                 continue;
             }
-            if(item == ControlCommand.love || item == ControlCommand.evol)
+            if(item == ControlCommand.love || item == ControlCommand.evol ||item == ControlCommand.authorize )
             {
                 continue;
             }

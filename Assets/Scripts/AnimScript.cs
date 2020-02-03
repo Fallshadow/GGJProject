@@ -62,6 +62,11 @@ public class AnimScript : MonoBehaviour
         animator.SetFloat("HorizontalAxis", x);
         animator.SetFloat("VerticalAxis", y);
     }
+    public void SetSliderParam(bool IsSlider)
+    {
+        animator.SetBool("IsSlider", IsSlider);
+        
+    }
     public void SetAwakeParam()
     {
         animator.SetBool("Awake",true);
