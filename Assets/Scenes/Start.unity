@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -272,25 +272,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c8e8cfc200c42cf42822bb4f2b3bda8b, type: 3}
---- !u!1001 &1850953578
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2731574024130509616, guid: 9f35440008d837b41a7e4adcc03569c3,
-=======
     - target: {fileID: 3398183355032167049, guid: 33151f9fbe4da6d41b819d4955739b6f,
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3398183355032167049, guid: 33151f9fbe4da6d41b819d4955739b6f,
->>>>>>> sdafasd
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
@@ -355,13 +342,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: RawImage (1)
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9f35440008d837b41a7e4adcc03569c3, type: 3}
---- !u!1 &2065457259
-GameObject:
-  m_ObjectHideFlags: 0
-=======
     - target: {fileID: 5753333185451006666, guid: 33151f9fbe4da6d41b819d4955739b6f,
         type: 3}
       propertyPath: m_IsActive
@@ -384,23 +364,15 @@ MonoBehaviour:
 --- !u!1 &547804472
 GameObject:
   m_ObjectHideFlags: 1
->>>>>>> sdafasd
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
-  - component: {fileID: 2065457261}
-  - component: {fileID: 2065457260}
-  m_Layer: 0
-  m_Name: GameObject
-=======
   - component: {fileID: 547804474}
   - component: {fileID: 547804473}
   m_Layer: 0
   m_Name: _FungusState
->>>>>>> sdafasd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
